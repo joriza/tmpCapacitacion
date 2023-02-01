@@ -231,7 +231,7 @@ Las Excepciones las pueden generar:
 - Cualquier biblioteca de terceros.
 - El código mismo de la aplicación.
 
-También se pueden lanzar excepciones dentro del programa con la palabra reservada `THROW`.
+>También se pueden lanzar excepciones dentro del programa con la palabra reservada `THROW`.
 
 En muchos casos una excepción no la produce un método al que el programa ha llamado directamente, sino otro método más abajo en la  pila de llamadas.
 
@@ -261,7 +261,7 @@ Las estructuras por el contrario, para  modelar comportamientos mas pequeños o 
 
 ### 047 [Clases](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20633888#announcements)
 
-[Link:](https://www.youtube.com/watch?v=47bfpYJQyr0)
+[Link externo:](https://www.youtube.com/watch?v=47bfpYJQyr0)
 
 Al declarar una variable de un tipo de referencia en tiempo de ejecución este contendrá un valor nulo hasta que se cree expresamente una instancia de la clase mediante el operador `new`. O se le asigne un objeto de un tipo compatible que se ha creado en otro lugar. 
 
@@ -284,5 +284,44 @@ Al declarar una variable de un tipo de referencia en tiempo de ejecución este c
 Las clases se declaran con la palabra clave `class` seguidas por un identificador único, que por convensión comienza en mayúscula (nombre de la clase). El resto de la definición es el cuerpo de la clase, donde se definen los datos y el comportamiento, campos, propiedades, métodos y los eventos de una clase.  
 la palabra `public` indica el nivel de acceso.  
 Aunque aveces se usan indistintamente una clase y un objeto son cosas diferentes.  
-Una **clase** define un tipo de objeto, pero no es un objeto en sí.  
-Un **objeto** es una entidad concreta, basada en una clase, que se conoce también como `un instancia de la clase`.
+>Una **clase** define un tipo de objeto, pero no es un objeto en sí.  
+
+>Un **objeto** es una entidad concreta, basada en una clase, que se conoce también como `una instancia de la clase`.
+
+### 048 [Encapsulación](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634148#announcements)
+
+La encapsulación significa, que un grupo de propiedades, métodos y otros miembros relacionados, se tratan como una sola unidad u objeto.  
+Cada clase puede tener distintos miembros de clase entre (propiedades, métodos, eventos.)
+
+[Link externo](https://www.youtube.com/watch?v=fAXJBLfgFVM)
+
+#### Campos y propiedades
+
+**Campos:**
+
+>dsfsfdsf
+>
+>> asdsfsdfds
+>
+>dsfsdfsdf
+
+* asdfdasf
+- dsfsdf
+
+Me llamo Javier Cristóbal y tengo un blog sobre [productividad mac][blog].
+En dicha [web][blog] recopilo artículos sobre todo lo relacionado con automatización, gestión y eficiencia.
+[blog]: http://limni.net/blog/
+
+
+De esta forma podrías insertar una imagen
+![nombre de la imagen][img1]  
+O dos, sin ensuciar tu espacio de escritura.
+![nombre de la imagen2][img2] 
+[img1]: /ruta/a/la/imagen.jpg "Título alternativo"
+[img2]: /ruta/a/la/imagen2.jpg "Título alternativo"
+
+<http://www.limni.net>
+
+MMD ofrece muchas más posibilidades que MD.
+*[MMD]: Abreviación para Multimarkdown
+*[MD]: Abreviación para Markdown
