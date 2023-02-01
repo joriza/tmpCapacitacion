@@ -32,6 +32,15 @@ Son documentos XML que el compilador necesita (contenido, requisitos de la plata
 
 ### [008 - Creación de Proyectos](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/34821812#overview)
 
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
+
 Todos los proyectos tienen un punto de entrada.
 Inician siempre por un método, que desde .NET 6 no se muestra, pero existe.
 
