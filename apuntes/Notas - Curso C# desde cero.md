@@ -334,3 +334,12 @@ O dos, sin ensuciar tu espacio de escritura.
 MMD ofrece muchas más posibilidades que MD.
 *[MMD]: Abreviación para Multimarkdown
 *[MD]: Abreviación para Markdown
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
