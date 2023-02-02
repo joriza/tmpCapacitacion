@@ -256,6 +256,8 @@ Los datos y comportamientos son los miembros de la clase o estructura, e incluye
 Una clase es un tipo de referencia. Cuando se se crea un objeto de la clase, la variable a la que se asigna el objeto, contiene solo una referencia a esa memoria. Es solo un apuntador a un espacio en la memoria.   
 Cuando la referencia de objeto se asigna a una variable nueva, la nueva variable hace referencia al objeto original. Los cambios originados en una variable se reflejan en la otra variable, porque ambas hacen referencia a los mismos datos.
 
+[**valor vs referencia*](https://www.youtube.com/watch?v=R_8iA6DjGmA)
+
 #### STRUCT
 
 Una estructura es un tipo de valor. Cuando se crea un struct, la variable a la que se asigna el struct, contiene los datos reales de la estructura. Cuando la estructura se asigna a una nueva variable, se copia, y por lo tanto la nueva variable y la variable original continen 2 copias independientes del mismo dato. Los cambios efectuados en una copia no afectan a la otra copia, como sucede en las clases.
@@ -303,9 +305,13 @@ Cada clase puede tener distintos miembros de clase entre (propiedades, métodos,
 
 Representan información que contiene un objeto
 
-**Campos:** Se parecen a las variables, ya que se pueden leer o establecer directamente, y son sujetos a los modificadores de acceso. Solo es accesible desde la propia clase.
+#### **Campos:** 
 
-**Propiedades:** Tienen descriptores de acceso get y set, que establecen mas control sobre la forma en que se establecen o devuelven los valores.  
+Se parecen a las variables, ya que se pueden leer o establecer directamente, y son sujetos a los modificadores de acceso. Solo es accesible desde la propia clase.
+
+#### **Propiedades:** 
+
+Tienen descriptores de acceso get y set, que establecen mas control sobre la forma en que se establecen o devuelven los valores.  
 
 ``` C#
     public string SecondName 
@@ -327,7 +333,9 @@ Las propiedades implementadas automáticamente no pueden ser de solo lectura.
     public string FirstName { get; set; }
 ```
 
-**Método:** Es una acción que un objeto puede realizar. Consta de un modificador de acceso, tipo, nombre y posibles parámetros. Se declara dentro de una definición de clase.
+#### **Método:** 
+
+Es una acción que un objeto puede realizar. Consta de un modificador de acceso, tipo, nombre y posibles parámetros. Se declara dentro de una definición de clase.
 
 ``` C#
     public int sampleMethod(string sampleParam)
@@ -345,7 +353,9 @@ Una clase puede tener varias implementaciones o sobrecargas del mismo método. S
     }
 ```
 
-**Constructores:** Son métodos de clase que se ejecutan automáticamente cuando se crea un objeto de un tipo determinado. Normalmente los constructores inicializan los miembros de los datos del nuevo objeto. Solo puede ejecutarse una vez cuando se crea la clase. Se ejecuta antes que cualquier otro código en una clase.  
+#### **Constructores:** 
+
+Son métodos de clase que se ejecutan automáticamente cuando se crea un objeto de un tipo determinado. Normalmente los constructores inicializan los miembros de los datos del nuevo objeto. Solo puede ejecutarse una vez cuando se crea la clase. Se ejecuta antes que cualquier otro código en una clase.  
 Se pueden crear sobrecargas del constructor, de la misma forma que para cualquier otro método.
 No tiene un tipo y se llama igual que la clase.
 
@@ -361,4 +371,142 @@ No tiene un tipo y se llama igual que la clase.
     }
 ```
 
-**Finalizadores:**
+#### **Finalizadores:**
+
+Se utilizan para destruir instancias de clase. Solo puede haber un finalizador para una clase.
+
+``` C#
+    ~sampleClass()
+    {
+        ...
+    }
+```
+
+#### **Eventos:** 
+
+Cuando ocurre algo relevante, los eventos habilitan una clase u objeto para notificarlo a otras cases u objetos.
+La clase que envía o genera el evento, recibe el nobre de publicador.
+Las clases que reciben, o controlan el evento, se denominan suscriptores.
+Para declarar un evento se utiliza la palabra `event`.
+
+#### **Clases anidadas:** 
+
+Se denomina así, cuando una clase es definida dentro de otra clase.
+De forma predeterminadad, una clase anidada es privada.
+
+#### **Modificadores de acceso:** 
+
+Todas las clases y miembros de clase, pueden especificar el nivel de acceso que proporcionan a otras clases mediante los modificadores de acceso.
+
+- **Public**: Permite obtener acceso al tipo miembro a cualquier otro código del mismo ensamblado o de otro ensamblado que haga referencia a este.
+- **Private**: Solo permite acceso al tipo miembro de la misma clase.
+- **Protected**: De la misma clase, o una clase derivada.
+- Internal: A cualquier miembro del mismo ensamblado, pero no de otro ensamblado. (.exe o .dll)
+- Protected Internal: Una combinación de ambas simultaneamente.
+- Private Protected: Una combinación de ambas simultaneamente.
+
+### 049 [Herencia](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634184#announcements)
+
+No todos los miembros de una clase base, los heredan las clases derivadas.  
+Los constructores y los finalizadores no se heredan.  
+Cada calse debe tener sus propios constructores y finalizadores.  
+Se heredan los demas miembros de una clase base. Que dichos miembros estén o no visibles, depende de su accesibilidad.
+
+#### **Override:** 
+
+Las clases derivadas pueden invalidar los métodos derivados al proporcionar una implementación alternativa.  
+Para poder invalidar un miembro, el miembro de la clase base debe marcarse con la palabra clave virtual, que de forma predeterminada no están marcados como virtual.
+La herencia solo se aplica a clases e interfaces.
+Otros tipos de estructura como: STRUCT, DELEGATES o ENUM, no soportan la herencia.
+
+``` C#
+    public class A
+    {
+        public virtual void VirtualMethod()
+        {
+            // Código del método
+        }
+        public void NotVirtualMethod()
+        {
+            // Código del método
+        }
+    }
+    public class B : A
+    {
+        public override void VirtualMethod()
+        {
+            // Código del método
+        }
+        public override void NotVirtualMethod() // Este caso marca error de compilador.
+        {
+            // Código del método
+        }
+    }
+```
+
+#### **Clases Abstractas:** 
+
+En algunos casos una clase derivada debe invalidar la implementación de la clase base.
+Los miembros de la clase base marcados con la palabra clave abstract, requieren que las clases derivadas los invaliden, forzosamente.
+Estas no permiten crear instancias de ellas. No se puede crear una instancia de una clase abstracta.
+Una clase abstract sin ningún método abstract, indica que representa un concepto abstracto, que se comparte entre varias clases concretas.
+La palabra reservada abstract, se utiliza para forzar que la clase derivada proporcione una implemtación.
+
+#### **Herencia implícita:** 
+
+Además de los tipos que pueden heredar mediante herencia única, todos los tipos heredan implicitamente de Object, o de un tipo derivado de este.
+
+### 050 [Enumeraciones](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/29991256#announcements)
+
+Es un tipo de valor definido por constantes. El índice comienza desde 0. Como es un tipo por valor, no es necesario crear una instancia. 
+Suelen ayudar bastante a interpretar el código para quien lo lee.
+
+``` C#
+    piblic enum Days
+    {
+        Lunes,
+        Martes.
+        Miercoles
+    }
+        // Para invocarlo
+        Days day = Days.Friday;
+```
+
+[Link:](https://www.youtube.com/watch?v=bnkphc-DjGA)
+
+### 051 [Práctica clases, encapsulación y herencia](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634242#announcements)
+
+**Clase sealed**: (sellada) Esta palabra se utiliza para indicar que la clase no puede servir como clase base para clases adicionales (hermanas, del mismo nivel).
+
+### 053 [Polimorfismo](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634320#announcements)
+
+En tiempo de ejecución los objetos de una clases derivada, pueden ser tratados como objetos de una clases base (para métodos, colecciones o matrices).
+
+### 054 [Bibliotecas de clases base de .NET](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634422#announcements)
+
+### 055 [Record](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/29994274#announcements)
+
+Es otra manera de definir tipos. Se puede utilizar en lugar de clases o estructuras. Es un tipo por referencia. 
+Es "similar" a una clase.
+Para el almacenamiento de datos presentan una sintaxis mas concisa.
+
+``` C#
+    // Tipo por referencia.
+    public record Pet1
+    {
+        //
+    }
+    // Tipo por valor.
+    public record struct Pet2
+    {
+        //
+    }
+```
+
+## - 09 Entrada / Salida 
+
+### 05x []()
+
+
+
+## - 10 Rendimiento y gestión de memoria
