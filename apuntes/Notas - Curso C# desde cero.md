@@ -353,3 +353,29 @@ $\x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 $\sqrt{3x-1}+(1+x)^2$
 
+
+
+$\sqrt{3x-1}+(1+x)^2$
+
+# $$x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+To split <span>$</span>100 in half, we calculate $100/2$
+
+$$\begin{Bmatrix}
+   a & b \\
+   c & d
+\end{Bmatrix}$$
+
+$$\def\arraystretch{1.5}
+   \begin{array}{c:c:c}
+   a & b & c \\ \hline
+   d & e & f \\
+   \hdashline
+   g & h & i
+\end{array}$$
+
+# $\Theta$
+
+# $⋒ \doublecap$
+
+
