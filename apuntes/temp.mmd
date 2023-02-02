@@ -1,9 +1,5 @@
 # [Aprende a programar desde cero con C#, Microsoft .NET y WPF](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/)
 
-# $\Bbb{.NET}$
-
-# $\colorbox{blue}{.NET}$
-
 ## 01 - Introduccion a .NET y Visual Studio
 
 ### 006 - SDK de .net
@@ -301,64 +297,31 @@ Cada clase puede tener distintos miembros de clase entre (propiedades, métodos,
 
 #### Campos y propiedades
 
-Representan información que contiene un objeto
+**Campos:**
 
-**Campos:** Se parecen a las variables, ya que se pueden leer o establecer directamente, y son sujetos a los modificadores de acceso. Solo es accesible desde la propia clase.
+>dsfsfdsf
+>
+>> asdsfsdfds
+>
+>dsfsdfsdf
 
-**Propiedades:** Tienen descriptores de acceso get y set, que establecen mas control sobre la forma en que se establecen o devuelven los valores.  
+* asdfdasf
+- dsfsdf
 
-``` C#
-    public string SecondName 
-    { 
-        get
-        {
-            return _secondName;
-        } 
-        set
-        {
-            _secondName = value;
-        } 
-    }
-```
+Me llamo Javier Cristóbal y tengo un blog sobre [productividad mac][blog].
+En dicha [web][blog] recopilo artículos sobre todo lo relacionado con automatización, gestión y eficiencia.
+[blog]: http://limni.net/blog/
 
-Las propiedades implementadas automáticamente no pueden ser de solo lectura.
 
-``` C#
-    public string FirstName { get; set; }
-```
+De esta forma podrías insertar una imagen
+![nombre de la imagen][img1]  
+O dos, sin ensuciar tu espacio de escritura.
+![nombre de la imagen2][img2] 
+[img1]: /ruta/a/la/imagen.jpg "Título alternativo"
+[img2]: /ruta/a/la/imagen2.jpg "Título alternativo"
 
-**Método:** Es una acción que un objeto puede realizar. Consta de un modificador de acceso, tipo, nombre y posibles parámetros. Se declara dentro de una definición de clase.
+<http://www.limni.net>
 
-``` C#
-    public int sampleMethod(string sampleParam)
-    {
-        return 0;
-    }
-```
-
-Una clase puede tener varias implementaciones o sobrecargas del mismo método. Se diferencian por el número o tipo de parámetros
-
-``` C#
-    public int sampleMethod(int sampleParam)
-    {
-        return 0;
-    }
-```
-
-**Constructores:** Son métodos de clase que se ejecutan automáticamente cuando se crea un objeto de un tipo determinado. Normalmente los constructores inicializan los miembros de los datos del nuevo objeto. Solo puede ejecutarse una vez cuando se crea la clase. Se ejecuta antes que cualquier otro código en una clase.  
-Se pueden crear sobrecargas del constructor, de la misma forma que para cualquier otro método.
-No tiene un tipo y se llama igual que la clase.
-
-``` C#
-    public sampleClass()
-    {
-        FirstName = "Sin Nombre"
-    }
-    public sampleClass(string firstName, string secondName)
-    {
-        FirstName = firstName;
-        _secondName = secondName;
-    }
-```
-
-**Finalizadores:**
+MMD ofrece muchas más posibilidades que MD.
+*[MMD]: Abreviación para Multimarkdown
+*[MD]: Abreviación para Markdown
