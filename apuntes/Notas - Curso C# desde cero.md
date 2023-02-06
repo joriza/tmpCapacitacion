@@ -562,7 +562,6 @@ Puede producir una perdida de datos.
 
 Formateo de datos: N2 Dato numérico con 2 decimales.
 
-
 ---
 ---
 
@@ -599,5 +598,101 @@ Se puede asignar 3 niveles de prioridad y si son en primer o segundo plano.
 
 ### 071 [ThreadStatic](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21164638#announcements)
 
-Al marcar un campo con el atributo ThreadStatuc, cada subproceso obtiene su propia copia de un campo determinado.
+Al marcar un campo con el atributo ThreadStatic, cada subproceso obtiene su propia copia de un campo determinado.
 
+### 072 [ThreadLocal](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21164640#announcements)
+
+### 073 [ThreadPool](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21452728#announcements)
+
+Para reutilizar un método que ha finalizado, para no tener que volver a crear un hilo luego.
+El crear un proceso consume recursos.
+
+### 074 [Usando Tareas](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21452730#announcements)
+
+Representa un trabajo que debe hacerse.  
+De manera predeterminada el planificador de tareas utiliza hilos desde un threadpool.
+
+### 075 [ContinueWith](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21452736#announcements)
+
+### 078 [Clase Paralel](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21538956#announcements)
+
+### 079 [Usando Async y Await](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21589256#announcements)
+
+Disponible en c# desde la versión 5.0.  
+Las tareas que solo consumen CPU y consumen mucho tiempo, se pueden transferir a otros hilos utilizando el objeto task, pero cuando se realiza un proceso que es de entrada/salida las cosas son un poco diferente.  
+Cuando el hilo principal realiza una operación de entrada salida, la aplicación se queda esperando a que esa operación finalice.  
+Escribir código asíncrono correctamente es dificil, especialmente cuando se trata de implementar el manejo de escepciones.  
+
+### 080 [Usando Async y Await - Escalabilidad](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21610144#overview)
+
+ReadAsync:  
+WriteAsync
+
+Excepciones en un método asíncrono.
+
+### 081 [Usando Async y Await - SynchronizationContext](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21651746#overview)
+
+Se puede deshabilitar.
+
+### 082 [Usando Parallel Language Integrade Query (PLinQ)](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21781450#overview)
+
+LinQ con consultas en paralelo.
+
+### 083 [Colecciones Concurrentes](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21889118#overview)
+
+No panipular los datos compartidos sin sincronizar el proceso.
+
+Thread Safe:  
+BlockinCollection:  
+ConcurrentBag:  
+ConcurrentStack:  
+ConcurrentQueue:  
+ConcurrentDictionary:  
+
+---
+---
+
+## - 12 Administrando subprocesos múltiples
+
+### 085 [Sincronizando recursos](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/22151076#overview)
+
+### 086 [Clase Volatile](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/22168426#overview)
+
+Tiene sus propios métodos de lectura / escritura.
+
+### 087 [Clase Interlocked](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/22189078#overview)
+
+Convierte algunas operaciones no atómicas en atómicas, como sumar, restar o comparar un string.
+Para operaciones complejas se debe usar lock.
+
+### 088 [Cancelando Tareas](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/22254032#overview)
+
+CancellationTocken: Para cancelar una tarea.  
+
+---
+---
+
+## - 13 Events y CallBacks
+
+### 090 [Entendiendo delegados](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/22400252#overview)
+
+En c++ sería un puntero a un función.  
+un delegado instanciado, a final de cuenta es un objeto más. Se pueden pasar como argumento a otros métodos.  
+Se pueden combinar, hacer multidifusión (Multicast)
+- Covarianza y Contravarianza.  
+
+### 091 [Usando Expresiones Lambda](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/22418538#overview)
+
+
+
+### 092 [Usando Eventos]()
+
+
+
+
+---
+---
+
+## - 14 Usando TIPOS en modo avanzado.
+
+### 094 [Creando Enumeraciones]()
