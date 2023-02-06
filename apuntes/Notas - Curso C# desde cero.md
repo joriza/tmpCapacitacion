@@ -358,7 +358,7 @@ Una clase puede tener varias implementaciones o sobrecargas del mismo método. S
     }
 ```
 
-#### [**Constructores:**](https://www.youtube.com/watch?v=t0c1H2Juj-M&t=3s) 
+#### **Constructores:**](https://www.youtube.com/watch?v=t0c1H2Juj-M&t=3s) 
 
 Son métodos de clase que se ejecutan automáticamente cuando se crea un objeto de un tipo determinado. Normalmente los constructores inicializan los miembros de los datos del nuevo objeto. Solo puede ejecutarse una vez cuando se crea la clase. Se ejecuta antes que cualquier otro código en una clase.  
 Se pueden crear sobrecargas del constructor, de la misma forma que para cualquier otro método.
@@ -558,14 +558,46 @@ No hay pérdida de información, pero puede haber pérdida de precisión.
 
 Puede producir una perdida de datos.
 
+### 064 [Tipos de conversión - System.Convert](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20937452#announcements)
 
-EconomyApp = https://twitter.com/EconomyApp?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
-americanas competencia de ML en Brasil.
-Short Seller
-SAMI debería llegr de 180 a 250
-Oro cayó 4% en 3 días y NASDAQ subió, hay una divergencia.
-Se compra oro cuando hay expectativa de infración.
-Los bonos argentinos en dólares cayeron.
-Se espera que la economía vuelva al nivel de crecimiento del final de 2021.
-Del 10 al 20% de la cartera en Metales, para balancear la cartera.
-Meta es un proyecto a 5 años.
+Formateo de datos: N2 Dato numérico con 2 decimales.
+
+
+---
+---
+
+## - 11 Implementando multiprocesamiento y procesamiento asíncrono
+
+### 067 [Delegados y Lambda](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21497576#announcements9)
+
+#### **Delegados:** 
+
+Tipos de delegados:
+
+- Func:
+- Action:
+- Predicate:
+
+#### **Lambda:** 
+Constituyen una sintaxis más cómoda para el uso de delegados. Declaran una firma y un cuerpo de método pero no tienen una identidad formal propia, a menos que se le asigne un delegado directamente.  
+A diferencia de los delegados, se pueden asignar directamente como lado izquierdo del registro de eventos.  Una expresión lambda es solo una forma de especificar un delegado.
+
+### 068 [Hilos (threads)](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21164630#announcements)
+
+Cada sub-proceso se ejecuta en su propio hilo.  
+Cambios de contexto: 
+
+### 069 [Clase THREAD](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21164634#announcements)
+
+[Link](https://www.youtube.com/watch?v=FOwdYHKvMf8)
+
+Permite asyn y await a partir de .Net version 4.5.
+
+Pertenece a espacio de nombres System.Threading. Permite gestionar sus hilos, gestionar su pérdida y obtener su estado.
+Solo de debe utilizar bajo necesidades específicas.
+Se puede asignar 3 niveles de prioridad y si son en primer o segundo plano.
+
+### 071 [ThreadStatic](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/21164638#announcements)
+
+Al marcar un campo con el atributo ThreadStatuc, cada subproceso obtiene su propia copia de un campo determinado.
+
