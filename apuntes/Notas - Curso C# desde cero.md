@@ -242,6 +242,7 @@ En muchos casos una excepción no la produce un método al que el programa ha ll
 ### 044 [Práctica Try Catch Finally](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/18528144#announcements)
 
 ---
+---
 
 ## - 08 Introducción a POO
 
@@ -264,6 +265,8 @@ Una estructura es un tipo de valor. Cuando se crea un struct, la variable a la q
 
 En general las clases se utilizan para modelar comportamientos mas complejos o datos que se preveen modificar después de haber creado un objeto de clase
 Las estructuras por el contrario, para  modelar comportamientos mas pequeños o datos que no se prevee modificar luego de haber creado la estructura.
+
+---
 
 ### 047 [Clases](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20633888#announcements)
 
@@ -293,6 +296,8 @@ Aunque aveces se usan indistintamente una clase y un objeto son cosas diferentes
 >Una **clase** define un tipo de objeto, pero no es un objeto en sí.  
 
 >Un **objeto** es una entidad concreta, basada en una clase, que se conoce también como `una instancia de la clase`.
+
+---
 
 ### 048 [Encapsulación](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634148#announcements)
 
@@ -353,7 +358,7 @@ Una clase puede tener varias implementaciones o sobrecargas del mismo método. S
     }
 ```
 
-#### **Constructores:** 
+#### [**Constructores:**](https://www.youtube.com/watch?v=t0c1H2Juj-M&t=3s) 
 
 Son métodos de clase que se ejecutan automáticamente cuando se crea un objeto de un tipo determinado. Normalmente los constructores inicializan los miembros de los datos del nuevo objeto. Solo puede ejecutarse una vez cuando se crea la clase. Se ejecuta antes que cualquier otro código en una clase.  
 Se pueden crear sobrecargas del constructor, de la misma forma que para cualquier otro método.
@@ -394,16 +399,18 @@ Para declarar un evento se utiliza la palabra `event`.
 Se denomina así, cuando una clase es definida dentro de otra clase.
 De forma predeterminadad, una clase anidada es privada.
 
-#### **Modificadores de acceso:** 
+#### [**Modificadores de acceso:** ](https://www.youtube.com/watch?v=fAXJBLfgFVM)
 
 Todas las clases y miembros de clase, pueden especificar el nivel de acceso que proporcionan a otras clases mediante los modificadores de acceso.
 
 - **Public**: Permite obtener acceso al tipo miembro a cualquier otro código del mismo ensamblado o de otro ensamblado que haga referencia a este.
-- **Private**: Solo permite acceso al tipo miembro de la misma clase.
 - **Protected**: De la misma clase, o una clase derivada.
-- Internal: A cualquier miembro del mismo ensamblado, pero no de otro ensamblado. (.exe o .dll)
+- **Private**: Solo permite acceso al tipo miembro de la misma clase.
+- Internal: A cualquier miembro del mismo ensamblado, pero no de otro ensamblado. (.exe o .dll - En la solución, es otro proyecto)
 - Protected Internal: Una combinación de ambas simultaneamente.
 - Private Protected: Una combinación de ambas simultaneamente.
+
+---
 
 ### 049 [Herencia](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634184#announcements)
 
@@ -444,7 +451,7 @@ Otros tipos de estructura como: STRUCT, DELEGATES o ENUM, no soportan la herenci
     }
 ```
 
-#### **Clases Abstractas:** 
+#### [**Clases Abstractas:**](https://www.youtube.com/watch?v=iRELmavR_eY&t=390s)
 
 En algunos casos una clase derivada debe invalidar la implementación de la clase base.
 Los miembros de la clase base marcados con la palabra clave abstract, requieren que las clases derivadas los invaliden, forzosamente.
@@ -455,6 +462,8 @@ La palabra reservada abstract, se utiliza para forzar que la clase derivada prop
 #### **Herencia implícita:** 
 
 Además de los tipos que pueden heredar mediante herencia única, todos los tipos heredan implicitamente de Object, o de un tipo derivado de este.
+
+---
 
 ### 050 [Enumeraciones](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/29991256#announcements)
 
@@ -474,6 +483,8 @@ Suelen ayudar bastante a interpretar el código para quien lo lee.
 
 [Link:](https://www.youtube.com/watch?v=bnkphc-DjGA)
 
+---
+
 ### 051 [Práctica clases, encapsulación y herencia](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634242#announcements)
 
 **Clase sealed**: (sellada) Esta palabra se utiliza para indicar que la clase no puede servir como clase base para clases adicionales (hermanas, del mismo nivel).
@@ -483,6 +494,8 @@ Suelen ayudar bastante a interpretar el código para quien lo lee.
 En tiempo de ejecución los objetos de una clases derivada, pueden ser tratados como objetos de una clases base (para métodos, colecciones o matrices).
 
 ### 054 [Bibliotecas de clases base de .NET](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634422#announcements)
+
+---
 
 ### 055 [Record](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/29994274#announcements)
 
@@ -503,10 +516,56 @@ Para el almacenamiento de datos presentan una sintaxis mas concisa.
     }
 ```
 
-## - 09 Entrada / Salida 
+---
+---
 
-### 05x []()
+## - 09 Entrada / Salida - Manejo de archivos de texto
 
+### 058 [Entrada / Salida en consola](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634714#announcements)
 
+La palabra reservada `using` ayuda en el manejo de objetos en memoria, asegurando que se eliminarán de forma correcta al terminar de ejecutar esa sección.
+
+`SetIn` y `SetOut` redirecciónan la salida estandard de pantalla o archivo con `StreamReader` y `StreamWriter`. Con los métodos OpenText() y CreateText().
+La lectura del archivo de produce de a una lectura por cada línea del archivo origen.
+
+### 059 [Usando E/S en archivos](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20634746#announcements)
+
+**Nota:** El simbolo `@` al comienzo de una cadena string, ayuda a omitir las secuencias de escape.
+
+Tambien se puede leer un archivo en una sola pasada, con ReadAllText() y WriteAllText() para grabarlo.
+
+---
+---
 
 ## - 10 Rendimiento y gestión de memoria
+
+### 061 [Tipos de valor vs tipos de referencia]()
+
+#### Tipos por valor:
+
+se alojan en la pila, para datos del tipo primitivo. No se modifican los datos originales, sino que se genera una "copia".
+
+#### Tipos de referencia:
+
+ se alojan en el Heap (Montón), para otros tipos de objetos y variables de tipo que no tienen una longitud determinada, como los string. En estos casos si se modifica los datos originales.
+Tiene un menor rendimiento que los tipos de valor.
+
+### 062 [Tipos de conversión - Implícita o de ampliación](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20937440#announcements)
+
+No hay pérdida de información, pero puede haber pérdida de precisión.
+
+### 063 [Tipos de conversión - Explícita o de restricción](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/20937444#announcements)
+
+Puede producir una perdida de datos.
+
+
+EconomyApp = https://twitter.com/EconomyApp?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+americanas competencia de ML en Brasil.
+Short Seller
+SAMI debería llegr de 180 a 250
+Oro cayó 4% en 3 días y NASDAQ subió, hay una divergencia.
+Se compra oro cuando hay expectativa de infración.
+Los bonos argentinos en dólares cayeron.
+Se espera que la economía vuelva al nivel de crecimiento del final de 2021.
+Del 10 al 20% de la cartera en Metales, para balancear la cartera.
+Meta es un proyecto a 5 años.
