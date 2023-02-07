@@ -21,16 +21,21 @@ El SDK contiene:
 - Runtime ASP.NET Core: Proporciona servicios básicos de aplicaciones conectadas a internet
 - Desktop Runtime: Runtime del Escritorio, Consola, Form y WPF.
 
-### 007 - Proyectos
+### 007 - [Proyectos](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/15968510#overview)
 
-Contiene todos los archivos que se compilan. Fuente, iconos, imagenes, archivos de configuración del proyecto.
+Un proyecto contiene todos los archivos que se compilan en un archivo ejecutable, biblioteca o sitio web.  
+Estos archivos pueden incluir codigo, fuente, iconos, imágenes, archivo de datos, etc..  
+Un proyecto también contiene la configuración del compilador y otros archivos de configuración que podrían ser necesarios en diversos servicios o componentes con los que el programa se comunica.
 
 #### Extensiones de los proyectos
 - .CSPROJ C#
 - .VBPROJ Visual Basic
 - .DBPROJ Base de Datos
 
-Son documentos XML que el compilador necesita (contenido, requisitos de la plataforma, información de la versión, configuración del servidor web o la base de datos).  
+Un proyecto está incluido dentro de una solución.  
+A pesar de su nombre, una solución no se refiere a una respuesta, sino simplemente a un contenedor con uno o más proyectos relacionados junto con la información de compilación, la configuración de las ventanas de Visual Studio y archivos diferentes que no están asociados al proyecto determinado.  
+Una solución se describe mediante un archivo de texto que tiene la extensión sln con su propio formato único.
+Este archivo no está diseñado para modificarse de forma manual.
 
 #### **Solución**: Es un contenedor con 1 o más proyectos relacionados (.sln)
 
@@ -38,6 +43,14 @@ Son documentos XML que el compilador necesita (contenido, requisitos de la plata
 
 Todos los proyectos tienen un punto de entrada.
 Inician siempre por un método, que desde .NET 6 no se muestra, pero existe.
+
+Si recuerdan, durante la instalación había una parte donde mostrábamos o seleccionamos las cargas de trabajo.  
+Dependiendo de las cargas de trabajo que seleccionamos aquí se podrían mostrar menos o más plantillas.  
+Como nosotros vamos a manejar C#, vamos a seleccionar C# y nos cambia a las plantillas que son para C#.  
+Nos muestra dos tipos de aplicación de consola, una a secas y otra para punto NET Framework.  
+En este curso vamos a estar utilizando la última versión de Punto Net. Entonces vamos a utilizar aplicación de consola a secas.  
+La versión para punto Net Framework utiliza todas las versiones de punto net Framework existentes, pero recordemos que Punto Net Framework ya quedó en una última versión y si queremos trabajar con punto Net.
+Al cambiar aquí el nombre del proyecto, también nos cambia el nombre de la solución, pero lo podemos editar para darle un nombre diferente si es lo que deseamos.
 
 #### Evitar que muestre partes que desde Net 6 no muestra, y funcionan como si fuera implicitamente.
 
@@ -686,7 +699,6 @@ Se pueden combinar, hacer multidifusión (Multicast)
 
 
 ### 092 [Usando Eventos]()
-
 
 
 
