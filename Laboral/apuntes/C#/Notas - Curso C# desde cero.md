@@ -49,10 +49,23 @@ Dependiendo de las cargas de trabajo que seleccionamos aquí se podrían mostrar
 Como nosotros vamos a manejar C#, vamos a seleccionar C# y nos cambia a las plantillas que son para C#.  
 Nos muestra dos tipos de aplicación de consola, una a secas y otra para punto NET Framework.  
 En este curso vamos a estar utilizando la última versión de Punto Net. Entonces vamos a utilizar aplicación de consola a secas.  
-La versión para punto Net Framework utiliza todas las versiones de punto net Framework existentes, pero recordemos que Punto Net Framework ya quedó en una última versión y si queremos trabajar con punto Net.
-Al cambiar aquí el nombre del proyecto, también nos cambia el nombre de la solución, pero lo podemos editar para darle un nombre diferente si es lo que deseamos.
+La versión para punto Net Framework utiliza todas las versiones de punto net Framework existentes, pero recordemos que Punto Net Framework ya quedó en una última versión y si queremos trabajar con punto Net.  
+Al cambiar aquí el nombre del proyecto, también nos cambia el nombre de la solución, pero lo podemos editar para darle un nombre diferente si es lo que deseamos.  
+El checkbox de más que dice colocar la solución y el proyecto en el mismo directorio. No se recomienda mantenerlo seleccionado ya que pone tanto la solución como los proyectos en una misma 
+carpeta y es más organizado si lo dejamos sin seleccionar.  
+Antes de continuar, vamos a explicar que tenemos en cada parte del lado derecho tenemos el explorador de soluciones.  
+Este explorador nos permite navegar a través de todos los archivos de nuestro proyecto o nuestra solución.  
+Como vimos en la teoría, nuestros proyectos se organizan por soluciones. Es por eso que en la parte raíz tenemos nuestra solución, que se llama My first app Sol de Solution.  
+Y adentro contiene un proyecto hasta ahora que se llama My first Up, que es del tipo consola.  
+Adentro de este proyecto tenemos algunos otros archivos o secciones que son necesarias para el proyecto mismo, como las dependencias y el Archivo Program.cs. Recordemos que las extensiones dependen del lenguaje que estamos utilizando, es por eso que esta
+clase o archivo tiene la extensión cs de C#.  
+Todos los proyectos tienen un punto de entrada, es decir, para que podamos entrar a este proyecto o a la aplicación en sí, debe de haber un punto de entrada, es decir, decirle al compilador dónde va a entrar o dónde va a empezar nuestro programa.  
+Normalmente esto está marcado por un archivo program en el caso de aplicaciones de consola y un método que ahora desde punto NET 6 ya no aparece aquí, aunque cuando compilamos si existe.  
+Para cerrar automáticamente la consola necesitamos habilitar algo. Tenemos que ir a herramientas, opciones, depuración y seleccionar un checkbox. Vamos a Herramientas opciones /  depuración. Vamos a buscar la opción que dice cerrar la consola automáticamente al detenerse la depuración y en la parte de abajo lo podemos encontrar.La seleccionamos, le damos a aceptar y veamos que pasa. Y ahorita lo abrió y lo cerró. No vimos nada porque fue muy rápido.
+Para solucionarlo, como ultima línea de nuestro programa se debe colocar `Console.ReadKey();`
 
-#### Evitar que muestre partes que desde Net 6 no muestra, y funcionan como si fuera implicitamente.
+
+#### Evitar hacer que muestre partes que desde Net 6 no muestra, y funcionan como si fuera implicitamente.
 
 - Al crear el proyecto, tildar la opción: No usar instrucciones de nivel superior.
 
@@ -103,8 +116,10 @@ Modificar una línea.
 
 #### Las directivas using
 
-Hacen referencia los espacios de nombres.  
-Los espacios de nombres proporcionan un método gerárquico para organizar las bibliotecas y los programas de C#.
+A partir de punto NET 6.0 lo que hace es ocultar los using más importantes, es decir, todos los  más importantes ya están como cargados por defecto y es por eso que no mandaba ningún error aquí.
+
+Esta directiva using hace referencia al espacio de nombres System. Los espacios de nombres proporcionan un método, digamos, así como jerárquico para organizar nuestras bibliotecas y los programas de system.  
+Los espacios de nombres con namespace, contienen tipos o también llamados clases y otros espacios de nombres a su vez.  
 
 **Sintaxis elemental:** Para invocar un método despues del nombre, debe haber paréntesis. Los paréntesis se conocen como el operadó de la invocación del métdo.  
 Antes del nombre del método se coloca el nombre de la clase.  
@@ -114,7 +129,7 @@ La sentencias finaliza con punto y coma (;). Que se denomina operador de final d
 #### Indicar a VS cual proyecto de la solución debe ejecutar.
 ![imagen_008-1](img/008-1.png)
 
-#### 009 - Descargar recursos del curso.
+### 009 - [Como utilizar los recursos del curso](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/32132064#overview)
 
 #### **Nota:** Abrir rápidamente y desde cualquier carpeta una solución: Haciendo doble clic sobre el archivo .sln  
 
@@ -126,13 +141,15 @@ La sentencias finaliza con punto y coma (;). Que se denomina operador de final d
 - Release: Modo más limpio que el tradicional, elimina los archivos temporales de la carpeta bin.
 
 ---
+---
 
 ## 03 - Introducción a los conceptos básicos
 
 ### 017 - [Ejemplo rápido con WinForm y WPF](https://www.udemy.com/course/aprende-a-programar-desde-cero-con-c-sharp-de-microsoft-dot-net/learn/lecture/17040996#announcements)
 
-#### **Nota:** Las instancias de tipos de referencia tambien se conocen como objetos
+#### **Nota:** Las instancias de tipos de referencia tambien se conocen como objetos.
 
+---
 ---
 
 ## 06 - Algorimos y estructuras de datos
@@ -206,6 +223,7 @@ formas de declarar listas
 ```
 
 ---
+--- 
 
 ## 07 - Manejo de errores y depuración
 

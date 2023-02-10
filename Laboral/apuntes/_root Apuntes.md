@@ -1,0 +1,7 @@
+
+Apuntes en general por Cambio de proyecto
+
+[[_C sharp]]  
+[[_SQL Server]]   
+[[Principios SOLID y Clean Code]]
+
