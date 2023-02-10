@@ -8,3 +8,4 @@ Las entidades se reflejan en una clase.
 Una clase por cada tabla
 
 Cada clase va a tener campos que representan un campo de cada tabla
+

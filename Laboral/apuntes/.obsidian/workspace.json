@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C#/C# desde cero.md",
+                "file": "C#/MVC C#.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -128,8 +129,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -149,7 +149,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C#/C# desde cero.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +165,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C#/C# desde cero.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,9 +186,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "C#/C# desde cero.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -209,8 +205,10 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "fc0d826df5ed739e",
+  "active": "10b5378845d4b233",
   "lastOpenFiles": [
+    "C#/MVC C#.md",
+    "C#/C# desde cero.md",
     "C#/Curso Básico de Programación con C#.md",
     "2023-02-10.md",
     "journals/2023_02_10.md",
@@ -218,8 +216,6 @@
     "_Apuntes.md",
     "Aplicaciones/Tomar Notas/_TomarNotas.md",
     "Aplicaciones/Tomar Notas/LogSeq/_LogSeq.md",
-    "ASP/_ASP.md",
-    "Aplicaciones/Tomar Notas/Obsidian/_Obsidian.md",
-    "SQL Server/Crear Tablas.md"
+    "ASP/_ASP.md"
   ]
 }
