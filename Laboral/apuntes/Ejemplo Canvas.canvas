@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"634ce165cf50bafd","x":-367,"y":-253,"width":352,"height":400,"type":"file","file":"Aplicaciones/Tomar Notas/Obsidian/_Obsidian.md"},
+		{"id":"2405d675174af7f2","x":332,"y":-53,"width":196,"height":200,"type":"file","file":"C#/Cambio de proyecto.md"}
+	],
+	"edges":[
+		{"id":"8e498b6f1039fe16","fromNode":"634ce165cf50bafd","fromSide":"right","toNode":"2405d675174af7f2","toSide":"left"}
+	]
+}
