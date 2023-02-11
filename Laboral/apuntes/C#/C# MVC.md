@@ -46,8 +46,8 @@ En el campo que es clave primaria, activar la propiedad Identity, para que el ca
 
 [Instalando Entity Framework](https://youtu.be/0Gu56u71G18?t=1330)
 
+En el proyecto: Click alternativo.
 Administrar paquetes nuggets.
-Se instala en el proyecto.
 
 [Conexion a Bd y Generar modelos](https://youtu.be/0Gu56u71G18?t=1455)
 
@@ -55,22 +55,16 @@ Agregar nuevo elemento / Datos / ADO.NET Entity Data Model
 
 [Generar Controles y Vistas Usando EF](https://youtu.be/0Gu56u71G18?t=1697)
 
+Se necesita crear las vistas y los controladores de esas vistas.
+Como EF trabaja con la información que tienen los modelos y se puede generar en forma automática.
+En la Carpeta Controllers Agregar controlador: MVC con vistas que usa EF. Que genera las vistas y el controlador a partir del modelo definido.
+Seleccionar Modelo, contexto de datos y solo selecciona el Layout por defecto.
+Escribir el nombre que se le vá a dar al controlador.
+Si Visual Studio muestra error al confirmar este paso, es necesario compilar el proyecto nuevamente y repetir la operación para crear el controlador.
+
 [Revisando el Crud](https://youtu.be/0Gu56u71G18?t=1903)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Eso es todo cuando se hace con EF. Crea el archivo con los controladores y con las Vistas.
 
 
 
@@ -85,9 +79,19 @@ Agregar nuevo elemento / Datos / ADO.NET Entity Data Model
 
 [¿Qué es MVC?](https://www.youtube.com/watch?v=m1shPjV-98U)
 
+[Código más Limpio con el Patrón MVC y Service Layer](https://www.youtube.com/watch?v=9-TvHe-hHeY)
+
+Cuando crecen los contoladores, es recomendable crear la capa de servicios. Y en ella utilizar interfaces.
+
 [Usuarios, roles y permisos en C# MVC .Net Framework | Seguridad](https://www.youtube.com/watch?v=uMU6hhic0WU)
 
 [Curso de MVC .Net C#| Introducción, controladores y vistas | #1](https://www.youtube.com/watch?v=UZNoQMio4XM&list=PLWYKfSbdsjJhzIXJW7FUZUEivr3HGKQZG&index=2)
 
+Buenas tardes.
+Cuando me saldría un flete de Libertad a Camino de Cintura y Richieri?
+Es para traer una bicicleta a Libertad.
+
 ---
+Manuel:
+https://github.com/manuel-chinchi/mvc-crud
 
