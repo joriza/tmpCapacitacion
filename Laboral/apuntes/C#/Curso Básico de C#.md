@@ -1,5 +1,7 @@
 # Curso Básico de Programación con C#
 
+Muy muy básico, lo dejo porque yá lo escribí.
+
 ## 8 - Palabra reservada var
 
 Las variables del tipo implícito se deben inicializar.

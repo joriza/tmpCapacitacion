@@ -2,7 +2,8 @@
 
 CRUD para una tabla 
 Con sql server
-y EntityFramework
+EntityFramework con Scaffolder
+
 
 Crear proyecto C##  / Web / Aplicacion web ASP.NET (.NET Framework)
 
