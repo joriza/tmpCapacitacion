@@ -1,11 +1,8 @@
-C# con MVC
+# [CRUD c# sql server MVC, desde CERO](https://www.youtube.com/watch?v=0Gu56u71G18)
 
 CRUD para una tabla 
 Con sql server
 y EntityFramework
-
-
-[CRUD c# sql server MVC, desde CERO](https://www.youtube.com/watch?v=0Gu56u71G18)
 
 Crear proyecto C##  / Web / Aplicacion web ASP.NET (.NET Framework)
 
@@ -59,7 +56,7 @@ Agregar nuevo elemento / Datos / ADO.NET Entity Data Model
 
 Se necesita crear las vistas y los controladores de esas vistas.  
 Como EF trabaja con la información que tienen los modelos y se puede generar en forma automática.  
-En la Carpeta Controllers Agregar controlador: MVC con vistas que usa EF. Que genera las vistas y el controlador a partir del modelo definido.  
+En la Carpeta Controllers Agregar controlador: MVC con vistas que usa EF. (Que genera las vistas y el controlador a partir del modelo definido).  
 Seleccionar Modelo, contexto de datos y solo selecciona el Layout por defecto.
 Escribir el nombre que se le vá a dar al controlador.  
 Si Visual Studio muestra error al confirmar este paso, es necesario compilar el proyecto nuevamente y repetir la operación para crear el controlador.  
@@ -71,31 +68,5 @@ Agrear la opcion del menú en el Layout con la directiva razor: `@Html.ActionLin
 Eso es todo cuando se hace con EF. Crea el archivo con los controladores y con las Vistas.
 
 
-
-
-
-
-
-
 ![[Visual Studio]]
-
-## Otros cursos para ver y resumir
-
-[¿Qué es MVC?](https://www.youtube.com/watch?v=m1shPjV-98U)
-
-[Código más Limpio con el Patrón MVC y Service Layer](https://www.youtube.com/watch?v=9-TvHe-hHeY)
-
-Cuando crecen los contoladores, es recomendable crear la capa de servicios. Y en ella utilizar interfaces.
-
-[Usuarios, roles y permisos en C# MVC .Net Framework | Seguridad](https://www.youtube.com/watch?v=uMU6hhic0WU)
-
-[Curso de MVC .Net C#| Introducción, controladores y vistas | #1](https://www.youtube.com/watch?v=UZNoQMio4XM&list=PLWYKfSbdsjJhzIXJW7FUZUEivr3HGKQZG&index=2)
-
-Buenas tardes.
-Cuando me saldría un flete de Libertad a Camino de Cintura y Richieri?
-Es para traer una bicicleta a Libertad.
-
----
-Manuel:
-https://github.com/manuel-chinchi/mvc-crud
 
