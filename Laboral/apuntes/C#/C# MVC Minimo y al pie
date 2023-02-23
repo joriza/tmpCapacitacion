@@ -1,10 +1,15 @@
 # [1.- ¿Qué es el controlador, la vista y el modelo? | Curso de MVC .Net Core](https://www.youtube.com/watch?v=fjmaXtgJpUg&list=PLWYKfSbdsjJg66pVtdaC4AGrA2mSsiMUL)
 
 - Cortito y al pié
-- C# MVC 
+- C# MVC Core
   - Controladores y vistas creadas a mano.
 - BD SQL Server
 - EF
   - Solo para levantar la estructura de la BD
 - LinQ
+ 
+
+
+ Scaffold-DbContext "Server=HCI-NOTE227\SQLEXPRESS; Database=CursoMvcCore; Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models/DB
+
 
