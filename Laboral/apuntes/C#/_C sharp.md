@@ -44,6 +44,16 @@ LQ: No
 CodeFirst s/DataAnotation  
 
 
+### [Crear Maestro Detalle en ASP.NET CORE con Entity Framework](https://www.youtube.com/watch?v=67xWSHEPc8o)
+
+Tiempo: 45 min
+Vistas y controladores a mano.  
+Inyección de dependencias
+ProyectoTipo: MVC .Net Core 6.0  
+BD: SQL Server 2 tablas  
+EF: Si. DbFirst c/DataAnotation  
+LQ:  
+Bootstrap  
 
 
 
@@ -97,18 +107,6 @@ Me falla en linq
 ### [Dapper](https://www.youtube.com/watch?v=BW8Ux1j_LYc&list=PLWYKfSbdsjJiZoXZ-imYs4JB6_468SHHu)
 
 5 cap
-
-
-### [Crear Maestro Detalle en ASP.NET CORE con Entity Framework](https://www.youtube.com/watch?v=67xWSHEPc8o)
-
-Tiempo: 45 min
-Sin Vistas(API) y controladores a mano.  
-Inyección de dependencias
-ProyectoTipo: MVC .Net Core 6.0  
-BD: SQL Server 2 tablas  
-EF: Si. DbFirst c/DataAnotation  
-LQ:  
-Bootstrap  
 
 
 [Introducción a Entity Framework Code First | Modelos | Programando en ASP.NET MVC 5](https://www.youtube.com/watch?v=IKlmroHxDNc)
@@ -223,7 +221,12 @@ EF: Si. CodeFirst c/DataAnotation
 LQ:  
 
 
+### [Curso ASP.NET Core MVC](https://www.youtube.com/watch?v=I6hiyyw0ZK4&list=PLYAyQauAPx8m4IsRhUftmy4TyKV0Kwwwr)
 
+Capitulos: 66
+NetCore SDK
+Visual Studio Core.
+Ejemplos Win y Linux
 
 
 

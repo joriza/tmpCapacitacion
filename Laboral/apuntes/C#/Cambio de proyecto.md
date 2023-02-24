@@ -81,5 +81,9 @@ Que nos conviente continuar haciendo?
 
 Diferencia entre ViewBag y ViewData.
 que es data context en .net
+    Cual es el uso del DbContext
 
 
+Algunos dataanotation que toma EF para mostrar en las vistas y que no sea el nombre del campo
+Problemas con pasar una lista para mostrar.
+Menu dentro de menu, pero hecho con bootstrap
