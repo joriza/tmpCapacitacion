@@ -56,13 +56,56 @@ LQ:
 Bootstrap  
 
 
+### [CODE FIRST con Entity Framework en .NET](https://www.youtube.com/watch?v=x1zjZUZJ6UA)
+
+Crear la estructura de las tablas y dbContext manualmente.
+Connection string tambien a mano en appsetting.json
+Tiempo: 26 min
+Vistas y controladores a mano.  
+2 Proyectos
+DbContext
+ProyectoTipo: .Net Core 6.0  
+BD: SQL Server 2 tablas  
+EF: Si. CodeFirst c/DataAnotation  
+LQ:  
 
 
-Wi3e6h0$6
+### [COMO Hacer Un CRUD en ASP.NET MVC 5 Usando ADO.NET En Visual Studio 2022](https://www.youtube.com/watch?v=klF4gz2wjfs)
 
-Dvextv0$tv
+Tiempo: 13
+AdoNet 1 tabla, controles y vistas manuales.
+ProyectoNombre: crudado
+ProyectoTipo: ASPNetFramework
+MarcoVersion: 4.6.1
+BD: SQL Server 
+CntTablas: 
+EF / ADO: ADO
+LQ:  
+DbFirst
 
-IGE: 1405091
+
+
+
+
+
+
+
+
+
+
+
+
+Tiempo:
+ProyectoNombre:
+ProyectoTipo: 
+MarcoVersion: 
+MVC
+BD: SQL Server 
+CntTablas: 
+EF / ADO:
+LQ:  
+
+
 
 
 
@@ -209,24 +252,26 @@ Listas, Diccionarios, Pilas, Colas.
 capítulos: 3   
 
 
-### [CODE FIRST con Entity Framework en .NET](https://www.youtube.com/watch?v=x1zjZUZJ6UA)
-
-Tiempo: 26 min
-Vistas y controladores a mano.  
-2 Proyectos
-DbContext
-ProyectoTipo: .Net Core 6.0  
-BD: SQL Server 2 tablas  
-EF: Si. CodeFirst c/DataAnotation  
-LQ:  
-
-
 ### [Curso ASP.NET Core MVC](https://www.youtube.com/watch?v=I6hiyyw0ZK4&list=PLYAyQauAPx8m4IsRhUftmy4TyKV0Kwwwr)
 
 Capitulos: 66
 NetCore SDK
 Visual Studio Core.
 Ejemplos Win y Linux
+
+
+### [Mejores Prácticas usando ADO.Net](https://www.youtube.com/watch?v=BR0W1sW5Kgs)
+
+Tiempo: 34min
+ProyectoNombre: NA
+ProyectoTipo:  NA
+MarcoVersion: NA
+MVC
+BD: SQL Server 
+CntTablas: NA
+EF / ADO: ADO
+LQ:  No
+
 
 
 

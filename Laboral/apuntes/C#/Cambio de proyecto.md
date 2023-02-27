@@ -87,3 +87,25 @@ que es data context en .net
 Algunos dataanotation que toma EF para mostrar en las vistas y que no sea el nombre del campo
 Problemas con pasar una lista para mostrar.
 Menu dentro de menu, pero hecho con bootstrap
+
+
+MVC a mano con CodeFirst para crear la bd
+usar sqlite, como para probar otro motor.
+Maestro detalle con jscript. Se puede usar algo como datagrid?
+    bostrap tiene como un datagrid.
+
+RDL para reportes
+    Reporting services
+
+
+"Server=HCI-NOTE227\\SQLEXPRESS; Database=InventoryDb; Trusted_Connection=True"
+
+
+
+### 230227
+
+NetFramework MVC
+AdoNet
+JQuery
+Bootstrap
+Base de Datos para despues.

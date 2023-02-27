@@ -48,3 +48,5 @@ update-database
 Comp y pag para bodegas, categorias, almac, io
 
 --------------------------------------------------------------------------------------------
+
+
