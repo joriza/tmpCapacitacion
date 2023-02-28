@@ -95,15 +95,6 @@ DbFirst
 
 
 
-Tiempo:
-ProyectoNombre:
-ProyectoTipo: 
-MarcoVersion: 
-MVC
-BD: SQL Server 
-CntTablas: 
-EF / ADO:
-LQ:  
 
 
 
@@ -273,9 +264,39 @@ EF / ADO: ADO
 LQ:  No
 
 
+[COMO Llenar Un DROPDOWNLIST En ASP.NET C#](https://www.youtube.com/watch?v=qs6DvnJcQko)
+
+Tiempo: 22 Min
+ProyectoNombre: NA
+ProyectoTipo: Framework
+MarcoVersion: 4.7.2
+MVC
+BD: SQL Server 2 tablas DbFirst
+CntTablas: 
+EF / ADO:
+LQ:  
+
+
+
+
+
+
+
+Tiempo:
+ProyectoNombre:
+ProyectoTipo: 
+MarcoVersion: 
+MVC
+BD: SQL Server 
+CntTablas: 
+EF / ADO:
+LQ:  
 
 
 ---
 Manuel:
 https://github.com/manuel-chinchi/mvc-crud
 
+
+add migration "nombre"
+update-database

@@ -19,3 +19,5 @@ Esplica paso a paso como armar una bd desde SSMS.
 
 [ lista de “connection strings”](https://www.connectionstrings.com/sql-server/)
 
+[SQL Server - Error 15404 Solución - Diagrama base de datos](https://www.youtube.com/watch?v=YgfxBywoPHs)
+
