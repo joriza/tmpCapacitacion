@@ -49,4 +49,108 @@ Comp y pag para bodegas, categorias, almac, io
 
 --------------------------------------------------------------------------------------------
 
+## [Pasar datos de los Controladores a las Vistas](https://www.youtube.com/watch?v=M3svi5v72XE&list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&index=7)
+
+La vista se limia a mostrar los datos que le envía el controlador.
+O tomar datos nuevos y enviárselos al controlador.
+
+### ViewData
+
+Es un diccionario.
+Es una desventaja, porque necesitamos escribir exactamente el nombre de la clave, y por estan dendro de una cadena, no hay ayuda del intellisence. Y en tiempo de ejecución simplemente la no mostrará nada.
+
+~~~ c#
+        public ActionResult Index()
+        {
+            ViewData["DNI"] = "12345678";
+            ViewData["Nombres"] = "Jorge Javier";
+            ViewData["Apellidos"] = "Izaguirre";
+
+            return View();
+        }
+~~~
+
+~~~ html
+@{
+    ViewBag.Title = "Inicio";
+}
+
+<h2>BIENVENIDOS</h2>
+
+<hr />
+
+Mi nombre es <b>@ViewData["Nombres"]</b> y mi apellido es <b>@ViewData["Apellidos"]</b> <br />
+y mi DNI es <b>@ViewData["DNI"]</b>
+~~~
+
+
+### ViewBag
+Es similar a ViewData, pero aprovecha las capacidades de la programación dinámica que ofrece C# desde la versión 4.0 para, en lugar de usar cadenas, usar las propiedades.
+
+
+~~~ c#
+        public ActionResult Index()
+        {
+            ViewBag.DNI = "12345678";
+            ViewBag.Nombres = "Jorge Javier";
+            ViewBag.Apellidos = "Izaguirre";
+
+            return View();
+        }
+~~~
+
+~~~ html
+<h2>Usando ViewBag</h2>
+Mi nombre es <b>@ViewBag.Nombres</b> y mi apellido es <b>@ViewBag.Apellidos</b>
+<br />
+y mi DNI es <b>@ViewBag.DNI</b>
+~~~
+
+### ViewModel
+
+Lo hace usando la propiedad model. Lo que se pasa es un objeto.
+A diferencia de los métodos anteriores, el controlador no tiene una propiedad model. En su lugar se utiliza una sobrecarga del método View y se envía el objeto como parámetro.
+
+En la carpeta Models, crear una clase, en este caso se llama PersonaModel
+~~~ c#
+namespace MvcTest.Models
+{
+    public class PersonaModel
+    {
+        public int DNI { get; set; }
+        public string Nombres { get; set; }
+        public string Apellidos { get; set; }
+    }
+}
+~~~
+
+En el controlador:
+~~~ c#
+    public ActionResult Index()
+    {
+        PersonaModel p = new PersonaModel
+        {
+            DNI = 21735582,
+            Nombres = "Jorge Javier",
+            Apellidos = "Izaguirre"
+        };
+
+        return View(p);
+    }
+~~~
+
+En la Vista:
+~~~ html
+@model MvcTest.Models.PersonaModel
+<h2>Usando ViewModel</h2>
+Mi nombre es <b>@Model.Nombres</b> y mi apellido es <b>@Model.Apellidos</b>
+<br />
+y mi DNI es <b>@Model.DNI</b>
+
+~~~
+
+
+
+> [!NOTE]
+> Information the user should notice even if skimming.
 
