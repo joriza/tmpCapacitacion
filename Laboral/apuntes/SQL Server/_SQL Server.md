@@ -19,5 +19,14 @@ Esplica paso a paso como armar una bd desde SSMS.
 
 [ lista de “connection strings”](https://www.connectionstrings.com/sql-server/)
 
-[SQL Server - Error 15404 Solución - Diagrama base de datos](https://www.youtube.com/watch?v=YgfxBywoPHs)
+## [SQL Server - Error 15404 Solución - Diagrama base de datos](https://www.youtube.com/watch?v=YgfxBywoPHs)
+
+Pocos pasos para poder utilizar diagrama con autenticación de Windows
+
+## [Creación de BD SQL Server](https://www.youtube.com/watch?v=fxDVA8wXzb8&list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&index=4)
+
+Con pasos interesantes de configuración de SQL Server.  
+Creando una tabla desde la opcion de menú Diagramas.  
+Y Carpetas de la plantilla MVC.  
+
 

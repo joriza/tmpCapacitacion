@@ -152,5 +152,5 @@ y mi DNI es <b>@Model.DNI</b>
 
 
 > [!NOTE]
-> Information the user should notice even if skimming.
+> Una forma de escribir una nota.
 
