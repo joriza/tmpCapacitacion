@@ -13,8 +13,13 @@
   - [Crear Vista](#crear-vista)
     - [Cargar datos en el controlador para enviar a la vista](#cargar-datos-en-el-controlador-para-enviar-a-la-vista)
     - [Condicional if en razor](#condicional-if-en-razor)
-  - [Agregar método para registrar nuevo registro](#agregar-método-para-registrar-nuevo-registro)
-  - [Modificar estuctura de BD y reflejar en proyecto](#modificar-estuctura-de-bd-y-reflejar-en-proyecto)
+  - [Agregar método para registrar nuevo registro - HttpGet](#agregar-método-para-registrar-nuevo-registro---httpget)
+  - [Modificar estuctura física de la BD y reflejar en proyecto](#modificar-estuctura-física-de-la-bd-y-reflejar-en-proyecto)
+    - [Método 1 - Actualizar modelo](#método-1---actualizar-modelo)
+    - [Método 2 - Eliminar tablas](#método-2---eliminar-tablas)
+    - [Ambos métodos](#ambos-métodos)
+    - [Agregar método para registrar nuevo registro - HttpPost](#agregar-método-para-registrar-nuevo-registro---httppost)
+    - [Evitar perder los DataAnnotation al actualizar modelo con EF](#evitar-perder-los-dataannotation-al-actualizar-modelo-con-ef)
 
 <div class="page"/>
 
@@ -59,6 +64,23 @@ La primera vez que se crea un usuario y el servidor solo está habilitado Autent
 ### [Crear Tablas con Diseñador de Base de datoas](https://youtu.be/fxDVA8wXzb8?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=872)
 
  de Enterprise Management
+
+Script para crear la tabla de forma sencilla, y que nos quede igual que la utializada en el ejemplo
+~~~ sql
+CREATE TABLE [dbo].[Alumno](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Nombres] [nvarchar](50) NOT NULL,
+	[Apellidos] [nvarchar](10) NOT NULL,
+	[Edad] [int] NOT NULL,
+	[Sexo] [char](1) NOT NULL,
+	[FechaRegistro] [datetime] NOT NULL,
+ CONSTRAINT [PK_Alumno] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+~~~
 
 <div class="page"/>
 
@@ -123,13 +145,41 @@ Utiliza LinQ como opcion para realizar una query que no entregue la totalidad de
 
 Este ejemplo se aplica sobre una vista.  
 
-## [Agregar método para registrar nuevo registro](https://youtu.be/vhQ92Is7X4Q?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=1689)
+## [Agregar método para registrar nuevo registro - HttpGet](https://youtu.be/vhQ92Is7X4Q?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=1689)
 
+Por omisión, el método es HttpGet, que carga la vista para recopilar datos por parte del usuario.
 El método Create se agrega en el controlador de la entidad Alumno.
 De la vista generada con scaffolding, se elimina el campo de fecha, porque se generará por código.
 
-## [Modificar estuctura de BD y reflejar en proyecto](https://youtu.be/vhQ92Is7X4Q?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=1976)
+## [Modificar estuctura física de la BD y reflejar en proyecto](https://youtu.be/vhQ92Is7X4Q?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=1976)
 
-Modificar la estructura física de la BD.
+### Método 1 - Actualizar modelo
 
-En VS en el modelo, boton derecho y actualizar cambios.
+En VS, en la carpeta Models, en el archivo .edmx, boton derecho, actualizar Modelo.  
+Indicar las tablas que debe actualizar, pero suele fallar este proceso.
+
+### Método 2 - Eliminar tablas 
+
+Ir a lo seguro, eliminar las tablas.  
+Guardar.   
+Click con botón derecho, actualizar modelo desde base de datos.  
+Indicar las tablas con las que se debe proceder.   
+
+### Ambos métodos
+
+En los archivos .tt de la carpeta Models.  
+Click con botón derecho, ejecutar herramienta personalizada.  
+
+### [Agregar método para registrar nuevo registro - HttpPost](https://youtu.be/Xn_G44-h8es?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=21)
+
+Antes de intentar guardar los datos que vienen de la vista, el método guardar verifica según lo que esté definido en el modelo, que se cumpla esas indicaciones con [DataAnnotation](https://learn.microsoft.com/es-es/aspnet/core/mvc/models/validation?view=aspnetcore-7.0).
+
+> Tener en cuenta que se borrarán los DataAnnotation que se escriban en un modelo con dbFirst si se regenera el modelo.
+
+### [Evitar perder los DataAnnotation al actualizar modelo con EF](https://youtu.be/Xn_G44-h8es?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=368)
+
+Crea una clase que contiene una copia de la estructura del modelo de la tabla física.
+
+En Models crear una clase, que se llama AlumnoCE.  
+Que va a ser como una clase parcial, que va a funcionar como un complemento de Alumno.cs.  
+
