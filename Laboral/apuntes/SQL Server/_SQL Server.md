@@ -1,21 +1,22 @@
 
-[[Crear Tablas]]
+# [[Crear Tablas]]
 
-[[Crear conexión a la BD]]
+# [[Crear conexión a la BD]]
 
 
 
-[¿Cómo hacer una base de datos de Usuarios con Roles de acceso? | SQL Server](https://www.youtube.com/watch?v=Xrbl6Xgmi-Q)
+## [¿Cómo hacer una base de datos de Usuarios con Roles de acceso? | SQL Server](https://www.youtube.com/watch?v=Xrbl6Xgmi-Q)
 
-[Como crear tablas y relaciones sin escribir código en sql server](https://www.youtube.com/watch?v=EnFrBZOoa38)
+## [Como crear tablas y relaciones sin escribir código en sql server](https://www.youtube.com/watch?v=EnFrBZOoa38)
 
 Queda un poco mas claro que en los otros ejemplos, porque solo realiza tareas en SQL Server.
 
-[Como hacer una Conexión a Base de Datos de SQL Server desde ASP.NET Visual C# con Web.config](https://www.youtube.com/watch?v=1FB_X3adKpQ&list=PL2xycGX1pDXPNeqFPVLajQ4D-KXBd6tQD&index=3)
+## [Como hacer una Conexión a Base de Datos de SQL Server](https://www.youtube.com/watch?v=1FB_X3adKpQ&list=PL2xycGX1pDXPNeqFPVLajQ4D-KXBd6tQD&index=3)
 
+Desde ASP.NET Visual C# con Web.config
 Esplica paso a paso como armar una bd desde SSMS.
 
-[Bases de datos para sistemas reles](https://www.youtube.com/watch?v=22DVuSmQpNw&list=PLWYKfSbdsjJg3xAytcOjOJuty7VQ4Y5r7)
+## [Bases de datos para sistemas reles](https://www.youtube.com/watch?v=22DVuSmQpNw&list=PLWYKfSbdsjJg3xAytcOjOJuty7VQ4Y5r7)
 
 [ lista de “connection strings”](https://www.connectionstrings.com/sql-server/)
 
@@ -28,5 +29,4 @@ Pocos pasos para poder utilizar diagrama con autenticación de Windows
 Con pasos interesantes de configuración de SQL Server.  
 Creando una tabla desde la opcion de menú Diagramas.  
 Y Carpetas de la plantilla MVC.  
-
 
