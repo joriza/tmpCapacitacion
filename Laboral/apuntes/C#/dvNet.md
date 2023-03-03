@@ -71,12 +71,6 @@ Es una desventaja, porque necesitamos escribir exactamente el nombre de la clave
 ~~~
 
 ~~~ html
-@{
-    ViewBag.Title = "Inicio";
-}
-
-<h2>BIENVENIDOS</h2>
-
 <hr />
 
 Mi nombre es <b>@ViewData["Nombres"]</b> y mi apellido es <b>@ViewData["Apellidos"]</b> <br />

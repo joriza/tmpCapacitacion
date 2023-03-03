@@ -178,8 +178,13 @@ Antes de intentar guardar los datos que vienen de la vista, el método guardar v
 
 ### [Evitar perder los DataAnnotation al actualizar modelo con EF](https://youtu.be/Xn_G44-h8es?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=368)
 
-Crea una clase que contiene una copia de la estructura del modelo de la tabla física.
+Crea una clase que contiene una copia de la estructura del modelo de la tabla física.  
+Esto ademas permite realizar allí las verificaciones antes de enviar a BD.  
+Y también agregar campos adicionales que no serán enviados a BD.  
 
 En Models crear una clase, que se llama AlumnoCE.  
 Que va a ser como una clase parcial, que va a funcionar como un complemento de Alumno.cs.  
+Se colocar con otro nombre porque suele suceder que no toma la clase original que contiene el modelo.  
+En esta nueva clase se pueden crear campos anexos al modelo de la bd.  
+Tambien esta nueva clase puede contener solo los campos ampliatorios, sin necesidad de contener los campos originales + los adicionales.  
 

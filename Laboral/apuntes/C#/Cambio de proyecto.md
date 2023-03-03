@@ -109,3 +109,24 @@ AdoNet
 JQuery
 Bootstrap
 Base de Datos para despues.
+
+
+### 230302 Avances
+
+Base de datos
+    Aunque me recomendó no profuncizar es una parte necesaria que algo mínimo se debe utilizar
+        Tengo problemas para colocar campo identidad
+        Al modificar la estructura
+        En algunos casos no me ha quedado otra que eliminar la tabla
+            lo llevo mejor con script de creacion, pero mejor no tener que regenerar.
+            Caso campos que antes eran nulos y ahora no.
+
+Dataannotation personalizadas
+    * en campos requeridos?
+    Preguntar a manu como lo hizo, utilizò otra cosa distinta a mi.
+        Fluent validation
+
+Modificar vistas
+    Botones
+        Tanto bootstrap como css
+
