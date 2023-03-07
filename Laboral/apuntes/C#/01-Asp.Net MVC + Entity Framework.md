@@ -18,8 +18,15 @@
     - [Método 1 - Actualizar modelo](#método-1---actualizar-modelo)
     - [Método 2 - Eliminar tablas](#método-2---eliminar-tablas)
     - [Ambos métodos](#ambos-métodos)
-    - [Agregar método para registrar nuevo registro - HttpPost](#agregar-método-para-registrar-nuevo-registro---httppost)
+    - [Agregar método para agregar nuevo registro - HttpPost](#agregar-método-para-agregar-nuevo-registro---httppost)
     - [Evitar perder los DataAnnotation al actualizar modelo con EF](#evitar-perder-los-dataannotation-al-actualizar-modelo-con-ef)
+    - [Agregar método para Editar registro](#agregar-método-para-editar-registro)
+    - [Agregar método Details para mostrar un registro](#agregar-método-details-para-mostrar-un-registro)
+    - [Agregar método para Eliminar un registro](#agregar-método-para-eliminar-un-registro)
+    - [Agregar segunda tabla al proyecto](#agregar-segunda-tabla-al-proyecto)
+      - [Codigo sql para crear tablas.](#codigo-sql-para-crear-tablas)
+    - [Como crear menú desplegable para Sexo](#como-crear-menú-desplegable-para-sexo)
+    - [Como crear menú desplegable para ciudad](#como-crear-menú-desplegable-para-ciudad)
 
 <div class="page"/>
 
@@ -68,7 +75,7 @@ La primera vez que se crea un usuario y el servidor solo está habilitado Autent
 Script para crear la tabla de forma sencilla, y que nos quede igual que la utializada en el ejemplo
 ~~~ sql
 CREATE TABLE [dbo].[Alumno](
-	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nombres] [nvarchar](50) NOT NULL,
 	[Apellidos] [nvarchar](10) NOT NULL,
 	[Edad] [int] NOT NULL,
@@ -81,6 +88,8 @@ CREATE TABLE [dbo].[Alumno](
 ) ON [PRIMARY]
 GO
 ~~~
+
+PRYMARY KEY (id)
 
 <div class="page"/>
 
@@ -170,7 +179,7 @@ Indicar las tablas con las que se debe proceder.
 En los archivos .tt de la carpeta Models.  
 Click con botón derecho, ejecutar herramienta personalizada.  
 
-### [Agregar método para registrar nuevo registro - HttpPost](https://youtu.be/Xn_G44-h8es?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=21)
+### [Agregar método para agregar nuevo registro - HttpPost](https://youtu.be/Xn_G44-h8es?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=21)
 
 Antes de intentar guardar los datos que vienen de la vista, el método guardar verifica según lo que esté definido en el modelo, que se cumpla esas indicaciones con [DataAnnotation](https://learn.microsoft.com/es-es/aspnet/core/mvc/models/validation?view=aspnetcore-7.0).
 
@@ -188,3 +197,129 @@ Se colocar con otro nombre porque suele suceder que no toma la clase original qu
 En esta nueva clase se pueden crear campos anexos al modelo de la bd.  
 Tambien esta nueva clase puede contener solo los campos ampliatorios, sin necesidad de contener los campos originales + los adicionales.  
 
+### [Agregar método para Editar registro](https://youtu.be/B52jljaYOWA?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=319)
+
+~~~ C#
+using (var db = new AlumnosContext())
+{
+    Alumno al = db.Alumno.Find(a.Id); // Preparo los datos que voy a enviar a la base de datos.
+    al.Nombres = a.Nombres;
+    al.Apellidos = a.Apellidos;
+    al.Edad = a.Edad;
+    al.Sexo= a.Sexo;
+
+    db.SaveChanges();
+
+    return RedirectToAction("Index"); // Si todo salió bien, redireccionar a otra página que no es la vista el propio controlador.
+}
+~~~
+
+El scaffolding me envía uno de los campos de la clase auxiliar a la vista.  
+Pero no me permite no ingresarlo, la validación de campos me indica que falta un campo.  
+Lo que más me llama la atención, es que solo envia uno de los 2 campos agregados en la tabla auxiliar.  
+Como no le envío ese campo a la tabla de datos, y tampoco tiene validación en la clase auxiliar, no me reporta error al grabar los datos en la base de datos.  
+
+Sin embargo el comando:  
+No indica error.  
+~~~ C#
+if (!ModelState.IsValid)
+~~~
+
+Luego descubrí que si en el mensaje de error que arroja al principio, voy  a mano a la direccion home/index, me permite continuar, y hasta editar y guardar los cambios.
+
+### [Agregar método Details para mostrar un registro](https://youtu.be/B52jljaYOWA?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=1104)
+
+~~~ C#
+using (var db = new AlumnosContext())
+{
+    Alumno alu = db.Alumno.Find(id);
+    return View(alu);
+}
+~~~
+
+### [Agregar método para Eliminar un registro](https://youtu.be/B52jljaYOWA?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=1397)
+
+~~~ C#
+using (var db = new AlumnosContext())
+{
+    Alumno alu = db.Alumno.Find(id);
+    db.Alumno.Remove(alu);
+    db.SaveChanges();
+    return RedirectToAction("Index"); // Para ir a una vista que no es la del propio controlador.
+}
+~~~
+
+No me funcionó el script para confirmar la acción Eliminar, es inocua.
+
+
+### [Agregar segunda tabla al proyecto](https://www.youtube.com/watch?v=UH-vAJX0jxE&list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&index=8)
+
+#### Codigo sql para crear tablas.
+
+~~~ sql
+USE [AlumnosDB]
+GO
+
+/****** Object:  Table [dbo].[Ciudad]    Script Date: 06/03/2023 17:21:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Ciudad](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nombre] [nchar](50) NOT NULL,
+ CONSTRAINT [PK_Ciudad] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+~~~
+
+~~~ sql
+USE [AlumnosDB]
+GO
+
+/****** Object:  Table [dbo].[Alumno]    Script Date: 06/03/2023 17:22:17 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Alumno](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nombres] [nvarchar](50) NOT NULL,
+	[Apellidos] [nvarchar](10) NOT NULL,
+	[Edad] [int] NOT NULL,
+	[Sexo] [char](1) NOT NULL,
+	[FechaRegistro] [datetime] NOT NULL,
+	[CodCiudad] [int] NOT NULL,
+ CONSTRAINT [PK_Alumno] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Alumno]  WITH CHECK ADD  CONSTRAINT [FK_Alumno_Ciudad] FOREIGN KEY([CodCiudad])
+REFERENCES [dbo].[Ciudad] ([Id])
+GO
+
+ALTER TABLE [dbo].[Alumno] CHECK CONSTRAINT [FK_Alumno_Ciudad]
+GO
+~~~
+
+Actualizar /Models/Modelxxxx.edmx
+
+
+### Como crear menú desplegable para Sexo
+
+Se modificar la vista.
+Se cargar las opciones posibles en la lista.
+
+### Como crear menú desplegable para ciudad
+
+Con los datos de la tabla Ciudad

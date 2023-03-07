@@ -130,3 +130,11 @@ Modificar vistas
     Botones
         Tanto bootstrap como css
 
+---
+
+Error al intentar grabar un registro.
+    Campo ID por identidad
+
+---
+
+Inconveniente con 1 campo auxiliar en el método editar/Post.

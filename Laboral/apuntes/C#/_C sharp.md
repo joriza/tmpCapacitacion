@@ -17,7 +17,7 @@ ProyectoTipo: MVC Core 3.1
 BD: Si  
 EF: Si  
 LQ: Si  
-CodeFirst c/DataAnotation  
+DbFirst c/DataAnotation  
 
 
 [MVC en .NET - Una introducción a la aplicación del patrón MVC en aplicaciones .NET con C#](https://www.youtube.com/watch?v=DG15OMmtjd8)
@@ -55,7 +55,7 @@ EF: Si. DbFirst c/DataAnotation
 LQ:  
 Bootstrap  
 
-
+***
 ### [CODE FIRST con Entity Framework en .NET](https://www.youtube.com/watch?v=x1zjZUZJ6UA)
 
 Crear la estructura de las tablas y dbContext manualmente.
