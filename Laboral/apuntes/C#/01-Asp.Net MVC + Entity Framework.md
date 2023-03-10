@@ -24,9 +24,9 @@
     - [Agregar método Details para mostrar un registro](#agregar-método-details-para-mostrar-un-registro)
     - [Agregar método para Eliminar un registro](#agregar-método-para-eliminar-un-registro)
     - [Agregar segunda tabla al proyecto](#agregar-segunda-tabla-al-proyecto)
-      - [Codigo sql para crear tablas.](#codigo-sql-para-crear-tablas)
     - [Como crear menú desplegable para Sexo](#como-crear-menú-desplegable-para-sexo)
     - [Como crear menú desplegable para ciudad](#como-crear-menú-desplegable-para-ciudad)
+    - [Otras formas de traer datos de tablas relacionadas](#otras-formas-de-traer-datos-de-tablas-relacionadas)
 
 <div class="page"/>
 
@@ -254,72 +254,86 @@ No me funcionó el script para confirmar la acción Eliminar, es inocua.
 
 ### [Agregar segunda tabla al proyecto](https://www.youtube.com/watch?v=UH-vAJX0jxE&list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&index=8)
 
-#### Codigo sql para crear tablas.
-
-~~~ sql
-USE [AlumnosDB]
-GO
-
-/****** Object:  Table [dbo].[Ciudad]    Script Date: 06/03/2023 17:21:40 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-CREATE TABLE [dbo].[Ciudad](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Nombre] [nchar](50) NOT NULL,
- CONSTRAINT [PK_Ciudad] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-~~~
-
-~~~ sql
-USE [AlumnosDB]
-GO
-
-/****** Object:  Table [dbo].[Alumno]    Script Date: 06/03/2023 17:22:17 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-CREATE TABLE [dbo].[Alumno](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Nombres] [nvarchar](50) NOT NULL,
-	[Apellidos] [nvarchar](10) NOT NULL,
-	[Edad] [int] NOT NULL,
-	[Sexo] [char](1) NOT NULL,
-	[FechaRegistro] [datetime] NOT NULL,
-	[CodCiudad] [int] NOT NULL,
- CONSTRAINT [PK_Alumno] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-
-ALTER TABLE [dbo].[Alumno]  WITH CHECK ADD  CONSTRAINT [FK_Alumno_Ciudad] FOREIGN KEY([CodCiudad])
-REFERENCES [dbo].[Ciudad] ([Id])
-GO
-
-ALTER TABLE [dbo].[Alumno] CHECK CONSTRAINT [FK_Alumno_Ciudad]
-GO
-~~~
-
 Actualizar /Models/Modelxxxx.edmx
-
 
 ### Como crear menú desplegable para Sexo
 
 Se modificar la vista.
 Se cargar las opciones posibles en la lista.
 
-### Como crear menú desplegable para ciudad
+### [Como crear menú desplegable para ciudad](https://youtu.be/Ay0oRQTcT0Q?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=194)
 
-Con los datos de la tabla Ciudad
+Con la clase auxiliar que se le puede agregar campos según se necesite.
+Con los datos de la tabla Ciudad.
+
+### Otras formas de traer datos de tablas relacionadas
+
+[1- Con Linq](https://youtu.be/Ay0oRQTcT0Q?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=283)
+
+~~~ c#
+using (AlumnosContext db = new AlumnosContext()) // Abro una conexión.
+{
+   var data = from a in db.Alumno
+                join c in db.Ciudad on a.CodCiudad equals c.Id
+                select new AlumnoCE
+                {
+                    Id = a.Id,
+                    Nombres = a.Nombres,
+                    Apellidos = a.Apellidos,
+                    Edad = a.Edad,
+                    Sexo = a.Sexo,
+                    NombreCiudad = c.Nombre,
+                    FechaRegistro = a.FechaRegistro
+                };
+
+    return View(data.ToList()); //Para enviar todos los alumnos
+}
+~~~
+
+Si se trabaja con capas, esto vá en la capa de acceso a datos.
+Ahora está en la capa de presentación, en los controladores.
+
+[2- Con consulta SQL](https://youtu.be/Ay0oRQTcT0Q?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=767)
+
+Los alias de la query deben ser igual que los campos de la tabla auxiliar AlumnosCE
+
+~~~ sql
+string sql = @"SELECT a.Id , a.Nombres, a.Apellidos, a.Edad, a.Sexo, a.FechaRegistro, c.Nombre AS NombreCiudad
+                    FROM Alumno a
+                    inner join Ciudad c on a.CodCiudad = c.Id";
+
+using (AlumnosContext db = new AlumnosContext()) // Abro una conexión.
+{
+    return View(db.Database.SqlQuery<AlumnoCE>(sql).ToList()); 
+}
+~~~
+
+[Si se necesita enviar parámetros](https://youtu.be/Ay0oRQTcT0Q?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=1285)
+
+A la Query string.
+Con Query parámeters.
+
+~~~ C#
+public ActionResult Index()
+{
+  int edad = 18;
+  string sql = @"SELECT a.Id , a.Nombres, a.Apellidos, a.Edad, a.Sexo, 
+                a.FechaRegistro, c.Nombre AS NombreCiudad
+                      FROM Alumno a
+                      inner join Ciudad c on a.CodCiudad = c.Id
+                      where a.Edad > @edad";
+
+  using (AlumnosContext db = new AlumnosContext()) // Abro una conexión.
+  {
+      return View(db.Database.SqlQuery<AlumnoCE>(sql, 
+      new SqlParameters("@edad", edad),
+      new SqlParameters("@variable2", edad)  
+      
+      ).ToList()); 
+  }
+}
+~~~
+
+
+
+
