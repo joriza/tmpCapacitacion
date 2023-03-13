@@ -15,6 +15,9 @@
     - [Las Vistas](#las-vistas)
     - [Razor](#razor)
     - [Gestión de paquetes Nuget](#gestión-de-paquetes-nuget)
+  - [Trabajando con datos](#trabajando-con-datos)
+    - [El Modelo](#el-modelo)
+    - [El uso de HTML Helpers](#el-uso-de-html-helpers)
 
 
 <div class="page"/>
@@ -39,6 +42,8 @@ Beneficios de ASP.NET MVC
 El Patron MVC  
 El entorno de desarrollo  
 - Referencia a paginas con pluggin para VS y programas fuentes comerciales.
+
+<div class="page"/>
 
 ## Conociendo ASP.NET MVC
 
@@ -83,9 +88,9 @@ No tiene restricción para el tipo de valor a devolver.
 
 Las acciones son el último destino de la solicitud.
 
-![Cuadro1](img/04/ProcesoPeticion.png)
+![Cuadro1](img/04/ProcesoPeticion.png){width='50px' height='50px'}
 
-![Cuadro1](img/04/TiposAccion.png)
+![Cuadro2](img/04/TiposAccion.png)
 
 #### Un Controlador puede redirigir a otro Controlador.
 
@@ -247,4 +252,29 @@ Pasos internos que realiza el gestor de paquetes, y que debería realizar el des
 - Construir el binario
 - Incluir referencias en el proyecto
 - Configurarlo
+
+<div class="page"/>
+
+## Trabajando con datos
+
+### [El Modelo](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7320098#learning-tools)
+
+Es donde se almacenan los datos, que se recuperan en un controlador y se van a mostrar en una vista.  
+No es más que una coleccón que vá a trabajar con los datos y la lógica de negocios de la aplicación.  
+
+### [El uso de HTML Helpers](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7320104#learning-tools)
+
+En MVC no existe una caja de herramientas para arrastrar y soltar controles html.  
+Con lo cual, para crear una vista, debe realizarse mediante código html.  
+Para superar este problema .NET provee html helpers.  
+Todos los métodos htm helpers, generan html en tiempo de ejecución.  
+Está diseñada para generar la interface de usuario. Nunca deben utilizarse dentro de controladores o modelos.  
+
+- Createinputs - Crean entradas.
+- Createlinks - Crean enlaces basadas en las tablas de enrutamiento.
+- Create forms - Crean etiquetas de formulario que se pueden enviar a la acción. O a otro controlador diferente.
+
+La sintaxis es: `@Html.xxx`
+
+[Listado de HtmoHelpers](img/04/ListadoDeHtmlHelper.pdf)
 
