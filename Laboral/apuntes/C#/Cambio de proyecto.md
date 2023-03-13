@@ -114,27 +114,43 @@ Base de Datos para despues.
 ### 230302 Avances
 
 Base de datos
-    Aunque me recomendó no profuncizar es una parte necesaria que algo mínimo se debe utilizar
+    Aunque me recomendó no profundizar es una parte necesaria que algo mínimo se debe utilizar
         Tengo problemas para colocar campo identidad
         Al modificar la estructura
         En algunos casos no me ha quedado otra que eliminar la tabla
             lo llevo mejor con script de creacion, pero mejor no tener que regenerar.
             Caso campos que antes eran nulos y ahora no.
 
-Dataannotation personalizadas
+Data annotation personalizadas
     * en campos requeridos?
-    Preguntar a manu como lo hizo, utilizò otra cosa distinta a mi.
+    Preguntar a manu como validó, utilizó otra cosa distinta a mi.
         Fluent validation
 
 Modificar vistas
     Botones
         Tanto bootstrap como css
+            Atento con la version de bootstrap, algunas cosas cambian mucho.
 
 ---
-
 Error al intentar grabar un registro.
     Campo ID por identidad
-
+        Era problema con la estructura de las clases que no se correspondía con las tablas físicas.
 ---
 
-Inconveniente con 1 campo auxiliar en el método editar/Post.
+Logré completar y hacer funcional una lista desplegable.
+    Ahora no funciona porque quedé a medio camino de hacerla con 2 niveles.
+Inconveniente con 1 campo auxiliar en el método editar/Post. (Estado)
+    Lo envía a la vista, como un campo físico más.
+Al llenar el combo no me toma el registro 1 de ciudad, el primero es como que no existe.
+
+LinQ con Query expresions o con métodos? Que conviene?
+Un objeto anónimo de linq es un cursor?
+
+Como tuve problemas para modificar estructura de BD en SSMS y al hacer pruebas necesito cambiar la estructura.
+Una posibilidad era borrar y crear toda la BD ante cualquier cambio, lo cual es inficiente y muy propenso a errores.
+Así que opté por practicar comandos para modificar estructura de BD
+
+Que me conviene clase auxiliar o ViewContext¿
+
+Como le indico que version de bootstrap voy a usar en el proyecto?
+

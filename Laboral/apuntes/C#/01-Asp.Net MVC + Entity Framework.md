@@ -18,14 +18,14 @@
     - [Método 1 - Actualizar modelo](#método-1---actualizar-modelo)
     - [Método 2 - Eliminar tablas](#método-2---eliminar-tablas)
     - [Ambos métodos](#ambos-métodos)
-    - [Agregar método para agregar nuevo registro - HttpPost](#agregar-método-para-agregar-nuevo-registro---httppost)
+  - [Crear método para agregar nuevo registro - HttpPost](#crear-método-para-agregar-nuevo-registro---httppost)
     - [Evitar perder los DataAnnotation al actualizar modelo con EF](#evitar-perder-los-dataannotation-al-actualizar-modelo-con-ef)
-    - [Agregar método para Editar registro](#agregar-método-para-editar-registro)
-    - [Agregar método Details para mostrar un registro](#agregar-método-details-para-mostrar-un-registro)
+  - [Agregar método para Editar registro](#agregar-método-para-editar-registro)
+  - [Agregar método Details para mostrar un registro](#agregar-método-details-para-mostrar-un-registro)
     - [Agregar método para Eliminar un registro](#agregar-método-para-eliminar-un-registro)
-    - [Agregar segunda tabla al proyecto](#agregar-segunda-tabla-al-proyecto)
+  - [Agregar segunda tabla al proyecto](#agregar-segunda-tabla-al-proyecto)
     - [Como crear menú desplegable para Sexo](#como-crear-menú-desplegable-para-sexo)
-    - [Como crear menú desplegable para ciudad](#como-crear-menú-desplegable-para-ciudad)
+  - [Como crear menú desplegable para ciudad](#como-crear-menú-desplegable-para-ciudad)
     - [Otras formas de traer datos de tablas relacionadas](#otras-formas-de-traer-datos-de-tablas-relacionadas)
 
 <div class="page"/>
@@ -179,7 +179,7 @@ Indicar las tablas con las que se debe proceder.
 En los archivos .tt de la carpeta Models.  
 Click con botón derecho, ejecutar herramienta personalizada.  
 
-### [Agregar método para agregar nuevo registro - HttpPost](https://youtu.be/Xn_G44-h8es?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=21)
+## [Crear método para agregar nuevo registro - HttpPost](https://youtu.be/Xn_G44-h8es?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=21)
 
 Antes de intentar guardar los datos que vienen de la vista, el método guardar verifica según lo que esté definido en el modelo, que se cumpla esas indicaciones con [DataAnnotation](https://learn.microsoft.com/es-es/aspnet/core/mvc/models/validation?view=aspnetcore-7.0).
 
@@ -197,7 +197,7 @@ Se colocar con otro nombre porque suele suceder que no toma la clase original qu
 En esta nueva clase se pueden crear campos anexos al modelo de la bd.  
 Tambien esta nueva clase puede contener solo los campos ampliatorios, sin necesidad de contener los campos originales + los adicionales.  
 
-### [Agregar método para Editar registro](https://youtu.be/B52jljaYOWA?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=319)
+## [Agregar método para Editar registro](https://youtu.be/B52jljaYOWA?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=319)
 
 ~~~ C#
 using (var db = new AlumnosContext())
@@ -227,7 +227,7 @@ if (!ModelState.IsValid)
 
 Luego descubrí que si en el mensaje de error que arroja al principio, voy  a mano a la direccion home/index, me permite continuar, y hasta editar y guardar los cambios.
 
-### [Agregar método Details para mostrar un registro](https://youtu.be/B52jljaYOWA?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=1104)
+## [Agregar método Details para mostrar un registro](https://youtu.be/B52jljaYOWA?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=1104)
 
 ~~~ C#
 using (var db = new AlumnosContext())
@@ -252,7 +252,7 @@ using (var db = new AlumnosContext())
 No me funcionó el script para confirmar la acción Eliminar, es inocua.
 
 
-### [Agregar segunda tabla al proyecto](https://www.youtube.com/watch?v=UH-vAJX0jxE&list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&index=8)
+## [Agregar segunda tabla al proyecto](https://www.youtube.com/watch?v=UH-vAJX0jxE&list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&index=8)
 
 Actualizar /Models/Modelxxxx.edmx
 
@@ -261,7 +261,7 @@ Actualizar /Models/Modelxxxx.edmx
 Se modificar la vista.
 Se cargar las opciones posibles en la lista.
 
-### [Como crear menú desplegable para ciudad](https://youtu.be/Ay0oRQTcT0Q?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=194)
+## [Como crear menú desplegable para ciudad](https://youtu.be/Ay0oRQTcT0Q?list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&t=194)
 
 Con la clase auxiliar que se le puede agregar campos según se necesite.
 Con los datos de la tabla Ciudad.

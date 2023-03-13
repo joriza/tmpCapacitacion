@@ -30,3 +30,80 @@ Con pasos interesantes de configuración de SQL Server.
 Creando una tabla desde la opcion de menú Diagramas.  
 Y Carpetas de la plantilla MVC.  
 
+## [Cuestiones de claves primarias y claves unicas](https://www.youtube.com/watch?v=QFfZdIZZEpQ&list=PLYAyQauAPx8nUhTpsDF8x3bSDvMWQAsZ5&index=21)
+
+
+
+
+
+
+
+## Apunte de comandos para modificar estructura de tablas
+
+~~~ sql
+USE DatabaseName
+
+/*Eliminar una tabla*/
+DROP table Ciudad
+DROP TABLE Alumno
+
+/*Agregar un campo*/
+ALTER TABLE Ciudad ADD direccion NVARCHAR(10) NOT NULL
+
+/*Eliminar un campo*/
+ALTER TABLE Ciudad DROP COLUMN direccion
+
+/*Renombrar un campo*/
+EXEC sp_RENAME 'Ciudad.direccion', 'Direccion', 'COLUMN'
+
+/*Modificar tipo de dato de un campo*/
+/*No se puede hacer con comandos identity una vez que la tabla está creada, solo desde SSMS*/
+ALTER TABLE Ciudad ALTER COLUMN Nombre nvarchar(30)
+
+
+go
+/*Listar propiedades de una tabla*/
+sp_help Ciudad
+sp_help Alumno
+
+/*Agregar una clave primaria*/
+ALTER TABLE Ciudad ADD PRIMARY KEY (Id) /*De esta forma la clave primaria toma un nombre aleatorio*/
+ALTER TABLE Ciudad ADD CONSTRAINT [PK_Ciudad] PRIMARY KEY (Id)
+
+/*Eliminar clave primaria*/
+ALTER TABLE Ciudad DROP CONSTRAINT PK__Ciudad__3214EC0797EBCCFB /*El ultimo parámetro es el nombre interno de la clave primaria*/
+ALTER TABLE Ciudad DROP CONSTRAINT PK_Ciudad
+~~~
+
+## Ejemplo de creacion de tablas relacionadas por comandos SQL
+
+~~~ sql
+/**************** Ejemplo de ABM de tablas ****************/
+/*Tener en cuenta que IDENTITY trae problemas si no se indica cuando se crea el campo*/
+USE a01
+
+CREATE TABLE Ciudad(
+	[Id] [int] IDENTITY(1,1),
+	[Nombre] [nchar](50) NOT NULL)
+go
+	 ALTER TABLE Ciudad ADD CONSTRAINT [PK_Ciudad] PRIMARY KEY (Id)
+go		
+
+
+CREATE TABLE [dbo].[Alumno](
+	[Id] [int] PRIMARY KEY IDENTITY(1,1),
+	[Nombres] [nvarchar](50) NOT NULL,
+	[Apellidos] [nvarchar](10) NOT NULL,
+	[Edad] [int] NOT NULL,
+	[Sexo] [char](1) NOT NULL,
+	[FechaRegistro] [datetime] NOT NULL,
+	[CodCiudad] [int] NOT NULL)
+
+
+/*Relaciona las tablas*/
+ALTER TABLE [dbo].[Alumno]  WITH CHECK ADD CONSTRAINT [FK_Alumno_Ciudad] FOREIGN KEY([CodCiudad])
+REFERENCES [dbo].[Ciudad] ([Id])
+
+ALTER TABLE [dbo].[Alumno] CHECK CONSTRAINT [FK_Alumno_Ciudad]
+
+~~~

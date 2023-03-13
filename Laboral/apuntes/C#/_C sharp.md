@@ -43,6 +43,11 @@ EF: Si
 LQ: No  
 CodeFirst s/DataAnotation  
 
+[Indicar que use SQLite](https://youtu.be/mIakY0QOtTA?list=PLTVK2lirpnShcRp2IgGa6P1EOCWvH--kD&t=385)
+
+Para que funcione con NetFramework descargar nugget
+System.Data.SQLite
+
 
 ### [Crear Maestro Detalle en ASP.NET CORE con Entity Framework](https://www.youtube.com/watch?v=67xWSHEPc8o)
 
@@ -55,7 +60,7 @@ EF: Si. DbFirst c/DataAnotation
 LQ:  
 Bootstrap  
 
-***
+
 ### [CODE FIRST con Entity Framework en .NET](https://www.youtube.com/watch?v=x1zjZUZJ6UA)
 
 Crear la estructura de las tablas y dbContext manualmente.
@@ -101,16 +106,18 @@ DbFirst
 
 
 
-
 ## Otros cursos para ver y resumir
 
 ### [¿Qué es MVC?](https://www.youtube.com/watch?v=m1shPjV-98U)
 
 Explicación rápida de que es MVC, ejemplo tomando datos json de un webservice falso.
+Le ingresan los datos en jormato json.
+
 
 ### [Código más Limpio con el Patrón MVC y Service Layer](https://www.youtube.com/watch?v=9-TvHe-hHeY)
 
-Cuando crecen los contoladores, es recomendable crear la capa de servicios. Y en ella utilizar interfaces.
+Cuando crecen los contoladores, es recomendable crear la capa servicio.  
+Y en ella utilizar interfaces.  
 
 ### [Usuarios, roles y permisos en C# MVC .Net Framework | Seguridad](https://www.youtube.com/watch?v=uMU6hhic0WU)
 
@@ -123,8 +130,6 @@ Cuando crecen los contoladores, es recomendable crear la capa de servicios. Y en
 Con algunas partes creadas a mano.
 
 ### [Validaciones con DataAnnotations Avanzado | MVC .Net | C# .Net](https://www.youtube.com/watch?v=rCYGd3_ADn4&list=PLWYKfSbdsjJjcTEeeqkGZi-_WL3w3A-Fu)
-
-### [Curso de MVC .Net C#| Introducción, controladores y vistas | #1](https://www.youtube.com/watch?v=UZNoQMio4XM&list=PLWYKfSbdsjJhzIXJW7FUZUEivr3HGKQZG)
 
 ### [1.- ¿Qué es el controlador, la vista y el modelo? | Curso de MVC .Net Core](https://www.youtube.com/watch?v=fjmaXtgJpUg&list=PLWYKfSbdsjJg66pVtdaC4AGrA2mSsiMUL)
 
@@ -182,10 +187,11 @@ ProyectoTipo: MVC .NET Framework 4.5.2
 BD: SQL Server 5 Tablas  
 EF: Si. CodeFirst c/DataAnotation  
 LQ:  
-Bootstrap. Sub Menús.  
+Data Annotation
+Sub Menús con Bootstrap. 
 
 
-### [Cómo crear Módulo Maestro Detalle en ASP.NET CORE](https://www.youtube.com/watch?v=hukosenzcW0&list=PLx2nia7-PgoDBpKthrdehLO8j76pnHoBm)
+### [Cómo crear Módulo Maestro Detalle en ASP.NET CORE](https://www.youtube.com/watch?v=hukosenzcW0)
 
 Tiempo: 56 min
 Vistas y controladores a mano.  
@@ -275,6 +281,50 @@ BD: SQL Server 2 tablas DbFirst
 CntTablas: 
 EF / ADO:
 LQ:  
+
+
+### [Curso de LINQ C# .NET](https://www.youtube.com/watch?v=Emk0GICLXC8)
+
+cortito y al pié
+
+Query expresions  
+Con métodos y lambda
+
+
+### [5 Métodos poco conocidos de LINQ en C# .Net](https://www.youtube.com/watch?v=jhEXqwG0xM8)
+
+Union  
+zip  
+join  
+all  
+SelectMany (Para listas dentro de listas)  
+
+
+### [ASP.NET CORE 6 MVC con ADO.NET + SQL Server](https://www.youtube.com/watch?v=yLMfbDDa6Is)
+
+Como conecar a SQL Server con ADO .Net
+Capa de conexion en otro proyecto
+Con Repository e Interfaces
+
+Tiempo: 22min
+ProyectoNombre: 
+ProyectoTipo: Core
+MarcoVersion: 6.0
+MVC
+BD: SQL Server 
+CntTablas: 
+EF / ADO:
+LQ:  
+
+
+
+
+
+
+
+
+
+
 
 
 
