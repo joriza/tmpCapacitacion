@@ -276,5 +276,5 @@ Está diseñada para generar la interface de usuario. Nunca deben utilizarse den
 
 La sintaxis es: `@Html.xxx`
 
-[Listado de HtmoHelpers](img/04/ListadoDeHtmlHelper.pdf)
+[Listado de HtmlHelpers](img/04/ListadoDeHtmlHelper.pdf)
 
