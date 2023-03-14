@@ -42,6 +42,8 @@
     - [Métodos de creación de formularios](#métodos-de-creación-de-formularios)
     - [Formularios de registro simple](#formularios-de-registro-simple)
       - [DbFirst](#dbfirst)
+  - [Bootstrap y JQuery en ASP.NET MVC](#bootstrap-y-jquery-en-aspnet-mvc)
+    - [Bootstrap](#bootstrap)
 
 
 <div class="page"/>
@@ -505,4 +507,14 @@ Se puede mezclar la sintaxis Razon con los HtmlHelpers.
 Añadir un objeto Entity Data Model.  
 La cadena de conexion se guarda en el archivo web.config.
 
+## Bootstrap y JQuery en ASP.NET MVC
+
+### [Bootstrap](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7533598#learning-tools)
+
+Es un Framework FrontEnd. Es un kit de herramientas para aplicaciones web muy popular.  
+Que ayuda a crear un formulario con Html, Css y JavaScript de una manera muy sencilla y con unos resultados finales muy atractivos.  
+Adapta el contenido visual al diferente tamaño de las pantallas.  
+Tambien proporciona las piezas que se necesitan para el diseño de una aplicación web.  
+La plantilla MVC lo incluye. Con lo cual el administrador de paquetes Nugget lo incluye en el proyecto de manera automática en la carpeta `Content` y en la carpeta `Scripts`.  
+Bootstrap tiene una dependencia de JQuery que tambien se instala automáticamente.  
 
