@@ -154,3 +154,8 @@ Que me conviene clase auxiliar o ViewContext¿
 
 Como le indico que version de bootstrap voy a usar en el proyecto?
 
+Descubrimientos recientes.
+- [HttpPost] No es un data annotation, es un selector.
+- Las ventajas del model binding.
+- Outputcaché
+- 
