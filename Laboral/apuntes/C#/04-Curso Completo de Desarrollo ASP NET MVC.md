@@ -2,7 +2,7 @@
   - [Introducción](#introducción)
   - [Comenzando](#comenzando)
   - [Conociendo ASP.NET MVC](#conociendo-aspnet-mvc)
-    - [Mi primera aplicación](#mi-primera-aplicación)
+    - [Primera aplicación](#primera-aplicación)
     - [El Ciclo de Vida](#el-ciclo-de-vida)
     - [El Enrutamiento](#el-enrutamiento)
     - [Los Controladores](#los-controladores)
@@ -22,16 +22,26 @@
     - [Las Bases de Datos](#las-bases-de-datos)
       - [Conexion con la base de datos](#conexion-con-la-base-de-datos)
     - [La Validación de Datos](#la-validación-de-datos)
-      - [Para actualizar la base de datos y cambió el modelo de datos](#para-actualizar-la-base-de-datos-y-cambió-el-modelo-de-datos)
+      - [Para actualizar la base de datos y cambios en el modelo de datos](#para-actualizar-la-base-de-datos-y-cambios-en-el-modelo-de-datos)
     - [Autenticación y Autorización Parte 1](#autenticación-y-autorización-parte-1)
     - [Autenticación y Autorización Parte 2](#autenticación-y-autorización-parte-2)
     - [El uso de la Caché](#el-uso-de-la-caché)
       - [Perfiles de Caché](#perfiles-de-caché)
-    - [CodeFirst](#codefirst)
+      - [CodeFirst](#codefirst)
     - [Dataannotations Parte 1](#dataannotations-parte-1)
       - [Espacio de nombres System.ComponentModel.DataAnnotations](#espacio-de-nombres-systemcomponentmodeldataannotations)
     - [Dataannotations Parte 2](#dataannotations-parte-2)
       - [Espacio de nombres System.ComponentModel.DataAnnotationsSchema](#espacio-de-nombres-systemcomponentmodeldataannotationsschema)
+    - [Scaffolding](#scaffolding)
+  - [Web API](#web-api)
+    - [Que es la Web API](#que-es-la-web-api)
+    - [Características de la Web API](#características-de-la-web-api)
+    - [Creación de una aplicación RESTful](#creación-de-una-aplicación-restful)
+  - [Formularios](#formularios)
+    - [El uso de los formularios](#el-uso-de-los-formularios)
+    - [Métodos de creación de formularios](#métodos-de-creación-de-formularios)
+    - [Formularios de registro simple](#formularios-de-registro-simple)
+      - [DbFirst](#dbfirst)
 
 
 <div class="page"/>
@@ -61,7 +71,7 @@ El entorno de desarrollo
 
 ## Conociendo ASP.NET MVC
 
-### [Mi primera aplicación](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7040522#learning-tools)
+### [Primera aplicación](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7040522#learning-tools)
 
 ~~~ C#
 namespace MiPrimeraAplicacion2.Controllers
@@ -322,7 +332,7 @@ public ActionResult Create(Clientes emp)
 ### [Las Bases de Datos](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7320122#learning-tools)
 
 Para almacenar y recuperar los datos vamos a utilizar una tecnología de acceso a datos de .NET Framework que se conoce como Entity Framework.  
-Sirve para definir y trabajar con los modelos. Soporta la técnica de code first, que nos permite la creación de objetos del modelo escribiendo clases simples, luego las bases de datos serán creadas sobre la marcha desde las clases. Permitiendo un flujo de desarrollo muy rápido y limpio.  
+Sirve para definir y trabajar con los modelos. Soporta la técnica de codeFirst, que nos permite la creación de objetos del modelo escribiendo clases simples, luego las bases de datos serán creadas sobre la marcha desde las clases. Permitiendo un flujo de desarrollo muy rápido y limpio.  
 
 Para el caso de .NET Framework se debe instalar el paquete nugget EntityFramework a secas. Sin que diga la palabra Core.
 
@@ -331,11 +341,11 @@ Para el caso de .NET Framework se debe instalar el paquete nugget EntityFramewor
 1. Con una cadena de conexion en el archivo Web.config entre las etiquetas Connection.
 2. Si no se genera este fichero, el propio entityFramework añade una tabla a la base de datos con el nombre de tabla, igual al nombre de la clase derivada de DbContext.
 
-Si no se indica, EF crea una base de datos con el nombre del proyecto y tablas con los nombres de las clases que lo definen.
+> Nota: **Si no se indica, EntityFramework crea una base de datos con el nombre del proyecto y tablas con los nombres de las clases que lo definen.**
 
 ### [La Validación de Datos](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7320132#notes)
 
-#### Para actualizar la base de datos y cambió el modelo de datos
+#### Para actualizar la base de datos y cambios en el modelo de datos
 
 En la consola de administación de paquetes: 
 
@@ -389,9 +399,9 @@ Para definir que roles pueden acceder a la parte privada.
 	  </caching>
 ~~~
 
-### CodeFirst
+#### CodeFirst
 
-[Resumen de DataAnnotarions](img/04/CodeFirst.pdf)
+[Resumen de DataAnnotations](img/04/CodeFirst.pdf)
 
 ### [Dataannotations Parte 1](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7494034#notes)
 
@@ -410,7 +420,7 @@ Para claves compuestas se debe indicar el orden de las columnas.
 [key, Column(Order = 2)]
 [MaxLength(24)] Solo para strings
 [MinLength(5)]
-[MaxLength(24), MinLength(5)] Se pueden combinar.
+[MaxLength(24), MinLength(5)] Se pueden combinar
 
 ### [Dataannotations Parte 2](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7489494#notes)
 
@@ -426,4 +436,73 @@ Afectan al esquema de la base de datos.
 - [InverseProperty("NombreCampoDeOtraTabla")]
 
 [Código fuente del capítulo](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7489336#learning-tools)
+
+### [Scaffolding](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7320142#learning-tools)
+
+Es un framework de generación de código para aplicaciones web ASP .NET. Se suele usar Scaffolding cuando queremos generar rápidamente código que va a interactuar con los modelos de datos de nuestra aplicación.  
+
+## Web API
+
+### [Que es la Web API](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7494062#learning-tools)
+
+Se utiliza para la integración con un sistema externo.  
+REST = Transferencia de estado representacional.  Ayula a reducir la sobrecarga de la aplicación y limita los datos que son transmitidos entre sistemas Cliente - Servidor.  
+
+ASP.NET Web API = Es un Framework creado para apoyar y simplificar la creación de servicios http que puedan ser consumidos por una gran variedad de clientes diferentes.  Diseñado para crear servicios RESTful y RPC.  
+Comparte con MVC: Enrutamiento, Seguridad, controladores ...
+
+- PUT - CREATE
+- GET - READ
+- POST- UPDATE
+- DELETE - DELETE
+
+### [Características de la Web API](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7494068#learning-tools)
+
+Tambien utliliza controladores, comparte asignar las solicitudes http a las acciones del controlador.  
+En lugar de usar una plantilla para la salida y un motor de vista para renderizar un resultado.  Lo que hace es procesar directamente el objeto modelo resultante como respuesta a la petición http entrante.  
+La principal diferencia es que los controladores API desacoplan el código de serialización de los resultados. Es decir, cada método de la web API devuelven los resulados JSON sin serialización.  
+
+El formato se selecciona autmáticamente en función de la cabecera accept de la solicitud http entrante. Los mas utilizados con JSON y XML.
+
+Los controladores de Web API pueden estar alojados fuera del runtime de ASP.NET o IISS.
+
+Los nombres de las acciones van a comenzar con uno de los verbos http. Los que no comienzan por uno de los verbos, se le asignará el verbo POST.  
+
+Rutas para las acciones:
+`/Api/productos/{id}`  
+
+Donde Api es la ruta por convension. Productos es el nombre del controlador. E id el el parámetro que esperamos recibir.
+
+### [Creación de una aplicación RESTful](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7494126#learning-tools)
+
+Los modelos son objetos que representan los datos de nuestra aplicación que se pueden serializar automáticamente a JSON, XML u otro formato.  
+
+## Formularios
+
+### [El uso de los formularios](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7503984#learning-tools)
+
+
+No es mas que un contenedor de elementos de entrada de un usuario. (cudro de texto, casilla de verificación. botón ...)
+
+El principal objetivo, es que el usuario envíe datos a una aplicación web.
+
+Los atributos más importantes de le etiqueta form de html.
+- Action - Le indica al navegador a donde tiene que enviar la información, por lo cual suele ser una url. Soporta rutas relativas y absolutas.  
+- Method - Es el atributo donde se asigna el método de envío. Le dice al navegador si debe usar Get o Post para enviar la información. El predeterminado es Get.
+
+Si no es por cuestiones de seguridad, es preferible utilizar solicitudes Get.  
+El método Post, es el método usado cuando se realiza un proceso de compra, un usuario registrado actualiza sus datos en la apliación web...  
+
+### [Métodos de creación de formularios](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7504006#learning-tools)
+
+Se puede utilizar html y htmlHelpers indistintamente.  Los Helpers brindan funcionalidades de validación y acceso a datos de una forma muy cómoda.  
+Se puede mezclar la sintaxis Razon con los HtmlHelpers.  
+
+### [Formularios de registro simple](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7504060#learning-tools)
+
+#### DbFirst
+
+Añadir un objeto Entity Data Model.  
+La cadena de conexion se guarda en el archivo web.config.
+
 
