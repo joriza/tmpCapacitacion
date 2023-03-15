@@ -1,5 +1,6 @@
 - [Curso de MVC .Net C# (hdeleon)](#curso-de-mvc-net-c-hdeleon)
   - [Como se crea un filtro](#como-se-crea-un-filtro)
+  - [Lista desplegable en Cascada](#lista-desplegable-en-cascada)
 
 <div class="page"/>
 
@@ -28,6 +29,8 @@ Es una clase que hereda de ActionfilterAttribute.
 Se debe sobrecargar el método OnActionExecuting.  
 El filtro se debe dar de alta en App Start / filterConfig.cs.  
 
+
+## [Lista desplegable en Cascada](https://www.youtube.com/watch?v=O6juQvbBiKI&list=PLWYKfSbdsjJhzIXJW7FUZUEivr3HGKQZG&index=9)
 
 09-07- Hay varias formas de llenar un select list
 09-15- Cascada. El segundo nivel se alimenta con el primer nivel.

@@ -44,6 +44,8 @@
       - [DbFirst](#dbfirst)
   - [Bootstrap y JQuery en ASP.NET MVC](#bootstrap-y-jquery-en-aspnet-mvc)
     - [Bootstrap](#bootstrap)
+    - [JQuery](#jquery)
+    - [Implementación de una lista desplegable con jQuery](#implementación-de-una-lista-desplegable-con-jquery)
 
 
 <div class="page"/>
@@ -517,4 +519,18 @@ Adapta el contenido visual al diferente tamaño de las pantallas.
 Tambien proporciona las piezas que se necesitan para el diseño de una aplicación web.  
 La plantilla MVC lo incluye. Con lo cual el administrador de paquetes Nugget lo incluye en el proyecto de manera automática en la carpeta `Content` y en la carpeta `Scripts`.  
 Bootstrap tiene una dependencia de JQuery que tambien se instala automáticamente.  
+Los archivos a ejecutarse se definen en `App_Start/BundleConfig.cs`.  
+
+### [JQuery](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7533618#learning-tools)
+
+Es una biblioteca de JavaScript que es muy rápida, es bastante pequeña y es muy rica en funciones.  Hace cosas como el desplazamiento y la maniputación de los documentos html, el manejo de eventos, las animaciones de ajax. Y hace el que ajax sea mucho mas sencillo.  
+Está diseñado para cambiar la foma de escribir JavaScript.  
+
+Principales características.
+
+- Selección de elementos del DOM, y procesarlos según las necesidades.
+- Menejo de eventos
+- Manipulacón del DOM
+
+### [Implementación de una lista desplegable con jQuery](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7533622#learning-tools)
 

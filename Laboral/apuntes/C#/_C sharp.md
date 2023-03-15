@@ -83,10 +83,13 @@ ProyectoNombre: crudado
 ProyectoTipo: ASPNetFramework
 MarcoVersion: 4.6.1
 BD: SQL Server 
-CntTablas: 
+CntTablas: 1
 EF / ADO: ADO
 LQ:  
 DbFirst
+Procedimientos almacenados
+
+
 
 
 
@@ -123,7 +126,14 @@ Y en ella utilizar interfaces.
 
 ### [¿Cómo llenar un DropDownList en MVC .Net con datos de una base de datos con Entity Framework?](https://www.youtube.com/watch?v=tiG71g9YnMw)
 
+NetFramework MVC
+Lee los datos de una tabla con LinQ para llenar una lista desplegable.  
+
+
 ### [DropDownList para país, estado y ciudad con ASP.NET, C# Y SQL Server (Fácil, rápido y entendible)](https://www.youtube.com/watch?v=9oAeVxviu2g&list=PLSuKjujFoGJ2Ivch50ihu0McQ_hrBD3Hb)
+
+Tiempo: 4 capítulos
+WebForm
 
 ### [Crear CRUD en MVC .Net con C#, Entity Framework y Sql Server](https://www.youtube.com/watch?v=nlW6cl7BTkY)
 
@@ -318,6 +328,38 @@ LQ:
 
 
 
+### [Acceso a datos con Ado.Net desde C#](https://www.youtube.com/watch?v=4v_WuOTwiW8)
+
+Tiempo: 53min.
+SqlServer - DbFirst
+Winform
+
+### [NetCore MVC](https://www.youtube.com/watch?v=I6hiyyw0ZK4&list=PLYAyQauAPx8m4IsRhUftmy4TyKV0Kwwwr)
+
+Tiempo: 66 Cap
+ProyectoNombre:
+ProyectoTipo: 
+MarcoVersion: 
+MVC
+BD: SQL Server 
+CntTablas: 
+EF / ADO:
+LQ:  
+
+
+### [Los 6 proyectos .NET de código abierto para ampliar tus conocimientos en C#](https://www.youtube.com/watch?v=klF4gz2w )
+
+Proyectos variados con su código fuente.
+
+
+### [.NET vs .NET Core vs .NET Framework vs .NET Standard 🤯 ¡Fuera DUDAS!](https://www.youtube.com/watch?v=klF4gz2w )
+
+Glosario de .Net que aclaran un poco las cosas.
+
+### [Data provider vs DataSets vs Entity Framework, tres formas de conectarte a una base de datos](https://www.youtube.com/watch?v=LO8DCduDjjk)
+
+Proyecto de consola.
+Pero muestra distintas formas de conectarse a una misma base de datos.
 
 
 
@@ -331,6 +373,9 @@ LQ:
 
 
 
+
+
+----------------------------------------------------------------------------------------
 
 Tiempo:
 ProyectoNombre:

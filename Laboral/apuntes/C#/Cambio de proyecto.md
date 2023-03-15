@@ -138,7 +138,7 @@ Error al intentar grabar un registro.
 ---
 
 Logré completar y hacer funcional una lista desplegable.
-    Ahora no funciona porque quedé a medio camino de hacerla con 2 niveles.
+    Ahora no funciona porque quedé a medio camino para hacerla con 2 niveles.
 Inconveniente con 1 campo auxiliar en el método editar/Post. (Estado)
     Lo envía a la vista, como un campo físico más.
 Al llenar el combo no me toma el registro 1 de ciudad, el primero es como que no existe.
@@ -158,4 +158,4 @@ Descubrimientos recientes.
 - [HttpPost] No es un data annotation, es un selector.
 - Las ventajas del model binding.
 - Outputcaché
-- 
+ 
