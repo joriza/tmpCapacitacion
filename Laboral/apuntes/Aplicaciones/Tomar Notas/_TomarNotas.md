@@ -10,3 +10,5 @@ Enlace a una nota por su nombre de archivo
 
 Empotrar un párrafo de una nota  
 ![[_SQL Server#SQL Server - Error 15404 Solución - Diagrama base de datos]]
+
+

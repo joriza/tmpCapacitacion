@@ -290,6 +290,8 @@ Pasos internos que realiza el gestor de paquetes, y que debería realizar el des
 Es donde se almacenan los datos, que se recuperan en un controlador y se van a mostrar en una vista.  
 No es más que una coleccón que vá a trabajar con los datos y la lógica de negocios de la aplicación.  
 
+> Ejemplo con una pequeña colección en memoria.
+
 ### [El uso de HTML Helpers](https://www.udemy.com/course/curso-completo-de-desarrollo-asp-net-mvc-5/learn/lecture/7320104#learning-tools)
 
 En MVC no existe una caja de herramientas para arrastrar y soltar controles html.  
