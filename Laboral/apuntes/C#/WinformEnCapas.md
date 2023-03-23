@@ -18,3 +18,26 @@ Agregar el contenido de la etiqueta `<connectionStrings>` de la capa datos, en l
 Agregar paquete Nugget de EF en las otras 2 capas.  
 Agregar referencia a Datos desde las otras 2 capas.  
 Agregar referencia a ModeloNegocio en la capa Presentación.  
+
+
+
+
+
+Esta parte es de otro video.
+
+Indicar la bases de datos
+Video 6/8
+
+App.confirg
+``` html
+<connectionStrings>
+    <add name="NorthWindCF" 
+            connectionString=
+                "Data Source=HCI-NOTE227\SQLEXPRESS; 
+                initial catalog=NorthWindCF; 
+                integrated Security=true; 
+                MultipleActiveResultSets=true"
+            providerName="System.Data.SqlClient"
+    />
+</connectionStrings>
+```
