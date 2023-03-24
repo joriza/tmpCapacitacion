@@ -6,8 +6,8 @@
     - [08. Creando solucion en capas](#08-creando-solucion-en-capas)
     - [09. Conexion a la base de datos](#09-conexion-a-la-base-de-datos)
     - [10. Alternativa de conexion a la base de datos.](#10-alternativa-de-conexion-a-la-base-de-datos)
-  - [Sec.05 - Mantenimiento Crud](#sec05---mantenimiento-crud)
-    - [11. Capa entidades](#11-capa-entidades)
+  - [Sec.05 - Mantenimiento Crud - Entidad Categoría](#sec05---mantenimiento-crud---entidad-categoría)
+    - [11. Capa entidades - Entidad Categoría](#11-capa-entidades---entidad-categoría)
     - [12. Capa Datos - Creando procedimientos almacenados](#12-capa-datos---creando-procedimientos-almacenados)
     - [13. Capa Datos - Clase Categoria](#13-capa-datos---clase-categoria)
     - [14. Capa Negocio - Clase Categoria](#14-capa-negocio---clase-categoria)
@@ -15,6 +15,15 @@
     - [16. Capa Presentación - Opciones de Menú - Formulario de Mantenimiento](#16-capa-presentación---opciones-de-menú---formulario-de-mantenimiento)
     - [17. Capa Presentación - Entidad Categoria - Listar registros](#17-capa-presentación---entidad-categoria---listar-registros)
     - [18. Capa Presentación - Entidad Categoria - Buscar registros](#18-capa-presentación---entidad-categoria---buscar-registros)
+    - [19. Capa Presentación - Entidad Categoria - Insertar registros, validaciones](#19-capa-presentación---entidad-categoria---insertar-registros-validaciones)
+    - [20. Capa Presentación - Entidad Categoria - Actualizar registros](#20-capa-presentación---entidad-categoria---actualizar-registros)
+    - [22. Capa Presentación - Entidad Categoria - Eliminar registros](#22-capa-presentación---entidad-categoria---eliminar-registros)
+    - [23. Capa Presentación - Entidad Categoria - Activar/Desactivar registros](#23-capa-presentación---entidad-categoria---activardesactivar-registros)
+  - [Sec.06 - Mantenimiento Crud - Entidad Articulo](#sec06---mantenimiento-crud---entidad-articulo)
+    - [24. Capa Entidades - Entidad Articulo](#24-capa-entidades---entidad-articulo)
+    - [25. Capa Entidades - Entidad Artículo - Procedimientos almacenados](#25-capa-entidades---entidad-artículo---procedimientos-almacenados)
+    - [26. Capa Datos - Clase DArticulo](#26-capa-datos---clase-darticulo)
+    - [26. Capa Negocio - Clase NArticulo](#26-capa-negocio---clase-narticulo)
 
 
 # [Desarrolla Sistemas en C# .Net - 4 capas con SQL Server](https://www.udemy.com/course/desarrolla-sistemas-c-sharp-net-sql-server-4-capas-poo/learn/lecture/15481990?start=600#overview)
@@ -52,9 +61,9 @@ www.connectionstrings.com/sql-server
 Desde un asistente de VS, con los datos que le pasamos, arma la cadena de conexión.  
 Aunque parece que no lo vamos a usar, el asistente la agrega en el archivo App.config.  
 
-## Sec.05 - Mantenimiento Crud
+## Sec.05 - Mantenimiento Crud - Entidad Categoría
 
-### 11. Capa entidades
+### 11. Capa entidades - Entidad Categoría
 
 Esta capa contiene una clase por cada tabla de la base de datos.  
 
@@ -83,4 +92,30 @@ Crear Manu principal y sus opciones hijos.
 ### 17. Capa Presentación - Entidad Categoria - Listar registros
 
 ### 18. Capa Presentación - Entidad Categoria - Buscar registros
+
+### 19. [Capa Presentación - Entidad Categoria - Insertar registros, validaciones](https://www.udemy.com/course/desarrolla-sistemas-c-sharp-net-sql-server-4-capas-poo/learn/lecture/15482088#overview)
+
+Nota. El evento `BtnInsertar_Click` de `FrmCategoria`.  
+Es un buen ejemplo para analizar como viajan parámetros.  
+Tanto de ida como de vuelta. Sobretodo en las verificaciones.
+
+### 20. Capa Presentación - Entidad Categoria - Actualizar registros
+
+Como capturar datos de un DataGridView.  
+
+### 22. Capa Presentación - Entidad Categoria - Eliminar registros
+
+No me parece buena implementación en `BtnEliminar_Click`, tiene varios if anidados.  
+
+### 23. Capa Presentación - Entidad Categoria - Activar/Desactivar registros
+
+## Sec.06 - Mantenimiento Crud - Entidad Articulo
+
+### 24. Capa Entidades - Entidad Articulo
+
+### 25. Capa Entidades - Entidad Artículo - Procedimientos almacenados
+
+### 26. Capa Datos - Clase DArticulo
+
+### 26. Capa Negocio - Clase NArticulo
 

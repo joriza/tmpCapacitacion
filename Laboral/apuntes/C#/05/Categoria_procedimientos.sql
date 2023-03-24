@@ -1,3 +1,6 @@
+use dbsistema
+go
+
 --Procedimiento Listar
 create proc categoria_listar
 as
