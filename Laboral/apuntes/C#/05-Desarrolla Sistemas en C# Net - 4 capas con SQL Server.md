@@ -23,7 +23,16 @@
     - [24. Capa Entidades - Entidad Articulo](#24-capa-entidades---entidad-articulo)
     - [25. Capa Entidades - Entidad Artículo - Procedimientos almacenados](#25-capa-entidades---entidad-artículo---procedimientos-almacenados)
     - [26. Capa Datos - Clase DArticulo](#26-capa-datos---clase-darticulo)
-    - [26. Capa Negocio - Clase NArticulo](#26-capa-negocio---clase-narticulo)
+    - [27. Capa Negocio - Clase NArticulo](#27-capa-negocio---clase-narticulo)
+    - [28. Capa Presentacion - Clase FrmArticulo - Listar y Buscar](#28-capa-presentacion---clase-frmarticulo---listar-y-buscar)
+    - [29. Capa Presentacion - Clase FrmArticulo - Listar en un ComboBox](#29-capa-presentacion---clase-frmarticulo---listar-en-un-combobox)
+    - [30. Capa Presentacion - Clase FrmArticulo - Cargar un archivo imagen](#30-capa-presentacion---clase-frmarticulo---cargar-un-archivo-imagen)
+    - [31. Capa Presentacion - Clase FrmArticulo - Generar y Guardar código de barras](#31-capa-presentacion---clase-frmarticulo---generar-y-guardar-código-de-barras)
+    - [32. Capa Presentacion - Clase FrmArticulo - Insertar Articulo](#32-capa-presentacion---clase-frmarticulo---insertar-articulo)
+    - [33. Capa Presentacion - Clase FrmArticulo - Actualizar Articulo](#33-capa-presentacion---clase-frmarticulo---actualizar-articulo)
+    - [34. Capa Presentacion - Clase FrmArticulo - Eliminar, activar y desactivar Articulo](#34-capa-presentacion---clase-frmarticulo---eliminar-activar-y-desactivar-articulo)
+  - [Sec.07 - Mantenimiento USUARIO Y ROLES](#sec07---mantenimiento-usuario-y-roles)
+    - [36. Gestion de roles de usuario](#36-gestion-de-roles-de-usuario)
 
 
 # [Desarrolla Sistemas en C# .Net - 4 capas con SQL Server](https://www.udemy.com/course/desarrolla-sistemas-c-sharp-net-sql-server-4-capas-poo/learn/lecture/15481990?start=600#overview)
@@ -117,5 +126,69 @@ No me parece buena implementación en `BtnEliminar_Click`, tiene varios if anida
 
 ### 26. Capa Datos - Clase DArticulo
 
-### 26. Capa Negocio - Clase NArticulo
+### 27. Capa Negocio - Clase NArticulo
+
+### 28. Capa Presentacion - Clase FrmArticulo - Listar y Buscar
+
+Dar formato al datagrid. (Titulos y ancho de columnas).
+
+### 29. Capa Presentacion - Clase FrmArticulo - Listar en un ComboBox
+
+Carga la lista de Categorias en un datable con nombre Tabla.
+
+> En FrmArticulo.cs:
+~~~ C#
+  private void CargarCategoria()
+  {
+      try
+      {
+          CboCategoria.DataSource = NCategoria.Seleccionar();
+          CboCategoria.ValueMember = "idcategoria";
+          CboCategoria.DisplayMember = "nombre";
+
+      }
+      catch (Exception ex)
+      {
+          MessageBox.Show(ex.Message + ex.StackTrace);
+      }
+  }
+~~~
+
+### 30. Capa Presentacion - Clase FrmArticulo - Cargar un archivo imagen
+
+Cargar imagen en un control PictureBox.  
+No guarda la imagen en la BD sino el nombre del archivo que se refiere al artículo.  
+Como utilizar el método `OpenFileDialog()`. 
+
+~~~ C#
+  private void BtnCargarImagen_Click(object sender, EventArgs e)
+  {
+      OpenFileDialog file = new OpenFileDialog();
+      file.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+      if (file.ShowDialog() == DialogResult.OK) 
+      {
+          PicImagen.Image = Image.FromFile(file.FileName);
+          TxtImagen.Text = file.FileName.Substring(file.FileName.LastIndexOf("\\")+1);
+          this.RutaOrigen = file.FileName;
+      }
+  }
+~~~
+
+### 31. Capa Presentacion - Clase FrmArticulo - Generar y Guardar código de barras
+
+Generar Código de Barras con el Paquete Nugget BarcodeLib.
+
+### 32. Capa Presentacion - Clase FrmArticulo - Insertar Articulo
+
+Luego de confirmar el movimiento se deben limpiar todos los componentes del formulario.
+
+### 33. Capa Presentacion - Clase FrmArticulo - Actualizar Articulo
+
+Tener en cuenta que al actualizar, se deben tomar los datos del registro actualizar y cargarlo en los controles del formulario, que es el mismo que para insertar, solo que en este caso se traen los datos que han sido registrados previamente.
+
+### 34. Capa Presentacion - Clase FrmArticulo - Eliminar, activar y desactivar Articulo
+
+## Sec.07 - Mantenimiento USUARIO Y ROLES
+
+### 36. Gestion de roles de usuario
 

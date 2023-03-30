@@ -306,6 +306,9 @@ Parece que sirve para .NET 4.5.2
 Teoría y práctica de 1 a 7 capas.
 
 [Repositorio de este y varios proyectos: ](https://gitlab.com/UAI-TCTD)
+1- https://youtu.be/lRZQsOE1quw?t=1131
+2- https://youtu.be/lRZQsOE1quw?t=1436
+4- https://youtu.be/lRZQsOE1quw?t=2761
 
 
 ### [CRUD ADO NET ENTITY FRAMEWORK](https://www.youtube.com/watch?v=HbQ4NwlanCc)
