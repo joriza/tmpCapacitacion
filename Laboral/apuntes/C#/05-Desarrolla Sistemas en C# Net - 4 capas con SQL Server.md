@@ -63,7 +63,7 @@ Agregar comunicacion entre las capas.
 
 ### 09. Conexion a la base de datos
 
-www.connectionstrings.com/sql-server
+[Enlace: ](www.connectionstrings.com/sql-server)
 
 ### 10. Alternativa de conexion a la base de datos.
 
