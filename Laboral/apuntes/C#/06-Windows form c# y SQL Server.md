@@ -19,6 +19,15 @@
     - [19. Modificar Interface Gráfica Formulario Departamentos](#19-modificar-interface-gráfica-formulario-departamentos)
     - [20. Consulta a la base de datos con parámetros.](#20-consulta-a-la-base-de-datos-con-parámetros)
     - [21. Desactivar algunos componentes del Formulario](#21-desactivar-algunos-componentes-del-formulario)
+      - [Propiedades:](#propiedades)
+    - [22. Modificar aspecto del Dgv](#22-modificar-aspecto-del-dgv)
+      - [Propiedades:](#propiedades-1)
+    - [23. Formulario Principal](#23-formulario-principal)
+    - [24. Formulario Principal. Cambiar diseño](#24-formulario-principal-cambiar-diseño)
+    - [25. Llenar DropDown con datos de tabla relacionada](#25-llenar-dropdown-con-datos-de-tabla-relacionada)
+    - [26. Manejar Caja de Diálogo Imagen](#26-manejar-caja-de-diálogo-imagen)
+    - [27. Modificar visualmente Formulario Empleados](#27-modificar-visualmente-formulario-empleados)
+    - [28. Recolectar informacion del formulario Empleados](#28-recolectar-informacion-del-formulario-empleados)
 
 
 
@@ -82,13 +91,12 @@ Prueba de conexion a base de datos.
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-
             return true;
         }
         catch (Exception)
         {
             return false;
-    0    }
+        }
     }
 ~~~
 
@@ -158,5 +166,60 @@ Método que llama el primer método.
 
 ### 21. Desactivar algunos componentes del Formulario
 
-Segun la tarea que se esté realizando, para minimizar errores de uso.
+Según la tarea que se esté realizando, para minimizar errores de uso.
+
+#### Propiedades:
+Desactivar CheckBox: Propiedad `ReadOnly = True`
+Desactivar Botón:    Propiedad `Enable   = False`
+
+### 22. Modificar aspecto del Dgv
+
+#### Propiedades:
+Que no se pueda agregar registros en el DataGrid.  
+`AllowUserToAddRows = False`  
+Que las columnas rellenen el ancho del datagrid.  
+`AutoSizeColumnsMode = Fill`  
+Modificar nombre de título de columnas del datagrid  
+`DgvDepartamentos.Columns[1].HeaderText = "Nombre Departamento"`  
+
+### 23. Formulario Principal
+
+### 24. Formulario Principal. Cambiar diseño
+
+### 25. [Llenar DropDown con datos de tabla relacionada](https://www.youtube.com/watch?v=-MGj-sC6qEA&list=PLSuKjujFoGJ3JzIbDs4hzVq8pfthRgAU-&index=25)
+
+~~~ C#
+        // namespace AdminEmpleados.PL
+        // public partial class frmEmpleados : Form
+        private void frmEmpleados_Load(object sender, EventArgs e)
+        {
+            DepartamentosDAL oDepartamentos = new DepartamentosDAL();
+            CbxDepartamento.DataSource = oDepartamentos.MostrarDepartamentos().Tables[0];
+            CbxDepartamento.DisplayMember = "departamento";
+            CbxDepartamento.ValueMember= "id";
+        }
+~~~
+
+~~~ C#
+        // public class DepartamentosDAL
+        public DataSet MostrarDepartamentos()
+        {
+            SqlCommand Sentencia = new SqlCommand("SELECT * FROM Departamentos");
+            return conexion.EjecutarSentencia(Sentencia);
+        }
+~~~
+
+Para llenar el ComboBox se utiliza el mismo método que se utiliza en el formulario de mantenimiento de Departamentos para listar todos los departamentos `MostrarDepartamentos`.  
+En la propiedad `DisplayMember` se coloca el campo de la base de datos que se vá a mostrar el ausuario.
+En la propiedad `ValueMember` se coloca el campo de la base de datos que se vá a utilizar internamente.
+
+### 26. [Manejar Caja de Diálogo Imagen](https://www.youtube.com/watch?v=__gNj3m05VQ&list=PLSuKjujFoGJ3JzIbDs4hzVq8pfthRgAU-&index=26)
+
+Seleccionar Imagen y Guardar en Base de Datos
+
+Propiedad: SizeMode = StreechImage
+
+### 27. Modificar visualmente Formulario Empleados
+
+### 28. Recolectar informacion del formulario Empleados
 
