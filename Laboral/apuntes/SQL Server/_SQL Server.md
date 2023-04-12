@@ -16,13 +16,13 @@ Queda un poco mas claro que en los otros ejemplos, porque solo realiza tareas en
 Desde ASP.NET Visual C# con Web.config
 Esplica paso a paso como armar una bd desde SSMS.
 
-## [Bases de datos para sistemas reles](https://www.youtube.com/watch?v=22DVuSmQpNw&list=PLWYKfSbdsjJg3xAytcOjOJuty7VQ4Y5r7)
+## [Bases de datos para sistemas reales](https://www.youtube.com/watch?v=22DVuSmQpNw&list=PLWYKfSbdsjJg3xAytcOjOJuty7VQ4Y5r7)
 
 [ lista de “connection strings”](https://www.connectionstrings.com/sql-server/)
 
-## [SQL Server - Error 15404 Solución - Diagrama base de datos](https://www.youtube.com/watch?v=YgfxBywoPHs)
+## [SQL Server - Error 15404 Solución - Utilizar diagrama de base de datos](https://www.youtube.com/watch?v=YgfxBywoPHs)
 
-Pocos pasos para poder utilizar diagrama con autenticación de Windows
+Pocos pasos para poder utilizar diagrama con autenticación de Windows.
 
 ## [Creación de BD SQL Server](https://www.youtube.com/watch?v=fxDVA8wXzb8&list=PL8neH3UPvUd4i9r9NHhhuGvtg8sxNDD-m&index=4)
 
@@ -31,6 +31,16 @@ Creando una tabla desde la opcion de menú Diagramas.
 Y Carpetas de la plantilla MVC.  
 
 ## [Cuestiones de claves primarias y claves unicas](https://www.youtube.com/watch?v=QFfZdIZZEpQ&list=PLYAyQauAPx8nUhTpsDF8x3bSDvMWQAsZ5&index=21)
+
+## Backup de una BD con forma de un script
+
+En la BD  
+click con el botón alternativo   
+Task  
+Generate script  
+...
+
+Esto genera un backup de la base de datos al estilo mysql.  
 
 
 

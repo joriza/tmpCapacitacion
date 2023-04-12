@@ -3,7 +3,9 @@
 
 [[_SQL Server]]
 
-## Parecen mínimos pero suficientes.
+## Resumen de cosas .NET
+
+-- Parecen mínimos pero dentro de todo suficientes.
 
 
 [MVC en .NET - Una introducción a la aplicación del patrón MVC en aplicaciones .NET con C#](https://www.youtube.com/watch?v=DG15OMmtjd8)

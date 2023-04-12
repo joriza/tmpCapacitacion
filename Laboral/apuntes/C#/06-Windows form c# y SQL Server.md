@@ -35,6 +35,7 @@
 
 [Basado en:](https://download.microsoft.com/download/2/2/1/221AD022-E701-488F-B070-7A0B87DFE789/Guia_Arquitectura_N-Capas_DDD_NET_4_(Borrador_Marzo_2010).pdf)
 
+Proyecto: AdminEmpleados
 Winform 
 Capas en Carpetas
 SQL DbFirst
