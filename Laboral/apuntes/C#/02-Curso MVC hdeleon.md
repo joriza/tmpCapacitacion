@@ -16,7 +16,7 @@ ProyectoNombre:
 ProyectoTipo: Net Framework
 MarcoVersion: 
 MVC
-BD: SQL Server 
+BD: SQL Server  
 DbFirst
 CntTablas: 
 EF / ADO:
